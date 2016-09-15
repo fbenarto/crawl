@@ -326,6 +326,10 @@ chunk of flesh
 
 A piece of raw meat found in the dungeon. It won't stay fresh for long.
 %%%%
+claymore
+
+A two-handed sword with a very long, heavy blade and a long handle.
+%%%%
 cloak
 
 A cloth cloak.
@@ -507,10 +511,6 @@ eldritch horrors.
 great mace
 
 An enormous metal war club, of great cumbrousness.
-%%%%
-great sword
-
-A sword with a very long, heavy blade and a long handle.
 %%%%
 halberd
 
