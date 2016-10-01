@@ -1327,7 +1327,7 @@ MARKER:  G = lua:fog_machine { \
 COLOUR: #vG = red
 KFEAT: # = closed_door
 MARKER: # = lua:props_marker({ \
-            door_description_suffix=" to the ashen valley of Gehenna", \
+            door_description_suffix=" to the Ashen Valley of Gehenna", \
             door_description_noun="gateway", \
          })
 MARKER: # = lua:restrict_door()
@@ -1373,7 +1373,7 @@ KITEM: ! = potion of resistance ident:all q:3, potion of agility ident:all q:3, 
 COLOUR: #c = lightcyan
 KFEAT: # = closed_door
 MARKER: # = lua:props_marker({ \
-            door_description_suffix=" to the freezing wastes of Cocytus", \
+            door_description_suffix=" to the Frozen Wastes of Cocytus", \
             door_description_noun="gateway", \
          })
 MARKER: # = lua:restrict_door()
@@ -1418,7 +1418,7 @@ COLOUR: # = darkgrey
 COLOUR: c = lightgrey
 KFEAT: # = closed_door
 MARKER: # = lua:props_marker({ \
-        door_description_suffix=" to the decaying netherworld of Tartarus", \
+        door_description_suffix=" to Tartarus, the Decaying Netherworld", \
         door_description_noun="gateway", \
         })
 MARKER: # = lua:restrict_door()

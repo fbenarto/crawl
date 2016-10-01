@@ -387,25 +387,25 @@ A gateway to a ziggurat
 
 A portal leading to a ziggurat.
 %%%%
-A gateway to the ashen valley of Gehenna
-
-A gateway leading to Gehenna.
-%%%%
 A gateway to Hell
 
 A gateway leading to the Vestibule of Hell. Few would go there voluntarily.
+%%%%
+A gateway to the Ashen Valley of Gehenna
+
+A gateway leading to the Ashen Valley of Gehenna.
 %%%%
 A gateway to the Iron City of Dis
 
 A gateway leading to the Iron City of Dis.
 %%%%
-A gateway to the decaying netherworld of Tartarus
+A gateway to Tartarus, the Decaying Netherworld
 
-A gateway leading to Tartarus.
+A gateway leading to Tartarus, the Decaying Netherworld.
 %%%%
-A gateway to the freezing wastes of Cocytus
+A gateway to the Frozen Wastes of Cocytus
 
-A gateway leading to Cocytus.
+A gateway leading to the Frozen Wastes of Cocytus.
 %%%%
 
 A hole to the Spider Nest

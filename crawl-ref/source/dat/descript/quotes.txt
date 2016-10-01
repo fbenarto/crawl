@@ -140,7 +140,7 @@ A gateway to a ziggurat
  Captain: For great justice.”
     -Zero Wing
 %%%%
-A gateway to the decaying netherworld of Tartarus
+A gateway to Tartarus, the Decaying Netherworld
 
 <Tartarus>
 %%%%
