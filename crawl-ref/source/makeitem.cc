@@ -724,8 +724,6 @@ static bool _try_make_armour_artefact(item_def& item, int force_type,
             item.sub_type = coinflip() ? ARM_NAGA_BARDING
                                        : ARM_CENTAUR_BARDING;
         }
-        else
-            hide2armour(item); // No randart hides.
 
         // Determine enchantment and cursedness.
         if (one_chance_in(5))
@@ -845,7 +843,8 @@ static special_armour_type _generate_armour_type_ego(armour_type type,
 
     // dragon/troll armour, animal hides, and crystal plate are never generated
     // with egos. (unless they're artefacts, but those aren't handled here.)
-    if (armour_type_is_hide(type, true)
+    // TODO: deduplicate with armour_is_special() (same except for animal skin)
+    if (armour_type_is_hide(type)
         || type == ARM_ANIMAL_SKIN
         || type == ARM_CRYSTAL_PLATE_ARMOUR)
     {
@@ -1190,12 +1189,6 @@ static void _generate_armour_item(item_def& item, bool allow_uniques,
         set_item_ego_type(item, OBJ_ARMOUR, SPARM_NORMAL);
     }
 
-    // Make sure you don't get a hide from acquirement (since that
-    // would be an enchanted item which somehow didn't get converted
-    // into armour).
-    if (force_good)
-        hide2armour(item);
-
     // Don't overenchant items.
     if (item.plus > armour_max_enchant(item))
         item.plus = armour_max_enchant(item);
@@ -1209,13 +1202,6 @@ static void _generate_armour_item(item_def& item, bool allow_uniques,
         && item.plus < _armour_plus_threshold(get_armour_slot(item)))
     {
         item.plus = 0;
-    }
-
-    if (armour_is_hide(item))
-    {
-        do_uncurse_item(item);
-        item.plus = 0;
-        set_ident_flags(item, ISFLAG_IDENT_MASK);
     }
 }
 
