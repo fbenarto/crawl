@@ -754,10 +754,10 @@ bool mons_class_is_firewood(monster_type mc)
  * @param mon             The monster
  * @returns True if the monster is firewood, false otherwise.
  */
-bool mons_is_firewood(const monster& mon)
+/*bool mons_is_firewood(const monster& mon)
 {
     return mons_class_is_firewood(mon.type);
-}
+}*/
 
 // "body" in a purely grammatical sense.
 bool mons_has_body(const monster& mon)
