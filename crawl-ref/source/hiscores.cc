@@ -24,8 +24,8 @@
 #endif
 
 #include "branch.h"
-//#include "chardump.h"
-#include "cio.h"
+#include "chardump.h"
+//#include "cio.h"
 #include "dungeon.h"
 #include "end.h"
 #include "english.h"
