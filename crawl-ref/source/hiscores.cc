@@ -44,8 +44,8 @@
 #include "place.h"
 #include "religion.h"
 #include "skills.h"
-//#include "state.h"
-#include "status.h"
+#include "state.h"
+//#include "status.h"
 #include "stringutil.h"
 #ifdef USE_TILE
  #include "tilepick.h"
