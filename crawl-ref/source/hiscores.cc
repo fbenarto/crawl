@@ -58,9 +58,6 @@
 
 #define SCORE_VERSION "0.1"
 
-/* Add Class */
-class hiscores{
-
 // enough memory allocated to snarf in the scorefile entries
 static unique_ptr<scorefile_entry> hs_list[SCORE_FILE_ENTRIES];
 
@@ -2938,4 +2935,3 @@ string xlog_status_line()
     return xl.xlog_line();
 }
 #endif // DGL_WHEREIS
-}
