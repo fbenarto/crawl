@@ -61,18 +61,18 @@
 class score{
 
 // enough memory allocated to snarf in the scorefile entries
-static unique_ptr<scorefile_entry> hs_list[SCORE_FILE_ENTRIES];
+/*static*/ unique_ptr<scorefile_entry> hs_list[SCORE_FILE_ENTRIES];
 
-static FILE *_hs_open(const char *mode, const string &filename);
-static void  _hs_close(FILE *handle, const string &filename);
-static bool  _hs_read(FILE *scores, scorefile_entry &dest);
-static void  _hs_write(FILE *scores, scorefile_entry &entry);
-static time_t _parse_time(const string &st);
-static string _xlog_escape(const string &s);
-static string _xlog_unescape(const string &s);
-static vector<string> _xlog_split_fields(const string &s);
+/*static*/ FILE *_hs_open(const char *mode, const string &filename);
+/*static*/ void  _hs_close(FILE *handle, const string &filename);
+/*static*/ bool  _hs_read(FILE *scores, scorefile_entry &dest);
+/*static*/ void  _hs_write(FILE *scores, scorefile_entry &entry);
+/*static*/ time_t _parse_time(const string &st);
+/*static*/ string _xlog_escape(const string &s);
+/*static*/ string _xlog_unescape(const string &s);
+/*static*/ vector<string> _xlog_split_fields(const string &s);
 
-static string _score_file_name()
+/*static*/ string _score_file_name()
 {
     string ret;
     if (!SysEnv.scorefile.empty())
@@ -87,7 +87,7 @@ static string _score_file_name()
     return ret;
 }
 
-static string _log_file_name()
+/*static*/ string _log_file_name()
 {
     return Options.shared_dir + "logfile" + crawl_state.game_type_qualifier();
 }
@@ -199,7 +199,7 @@ void logfile_new_entry(const scorefile_entry &ne)
 }
 
 template <class t_printf>
-static void _hiscores_print_entry(const scorefile_entry &se,
+/*static*/ void _hiscores_print_entry(const scorefile_entry &se,
                                   int index, int format, t_printf pf)
 {
     char buf[200];
@@ -301,7 +301,7 @@ void hiscores_print_list(int display_count, int format, int newest_entry)
     }
 }
 
-static void _add_hiscore_row(MenuScroller* scroller, scorefile_entry& se, int id)
+/*static*/ void _add_hiscore_row(MenuScroller* scroller, scorefile_entry& se, int id)
 {
     TextItem* tmp = nullptr;
     tmp = new TextItem();
@@ -321,7 +321,7 @@ static void _add_hiscore_row(MenuScroller* scroller, scorefile_entry& se, int id
     tmp->set_visible(true);
 }
 
-static void _construct_hiscore_table(MenuScroller* scroller)
+/*static*/ void _construct_hiscore_table(MenuScroller* scroller)
 {
     FILE *scores = _hs_open("r", _score_file_name());
 
@@ -343,7 +343,7 @@ static void _construct_hiscore_table(MenuScroller* scroller)
         _add_hiscore_row(scroller, *hs_list[j], j);
 }
 
-static void _show_morgue(scorefile_entry& se)
+/*static*/ void _show_morgue(scorefile_entry& se)
 {
     formatted_scroller morgue_file;
     int flags = MF_NOSELECT | MF_ALWAYS_SHOW_MORE | MF_NOWRAP;
@@ -494,7 +494,7 @@ void show_hiscore_table()
 }
 
 // Trying to supply an appropriate verb for the attack type. -- bwr
-static const char *_range_type_verb(const char *const aux)
+/*static*/ const char *_range_type_verb(const char *const aux)
 {
     if (strncmp(aux, "Shot ", 5) == 0)                // launched
         return "shot";
@@ -513,7 +513,7 @@ string hiscores_format_single(const scorefile_entry &se)
     return se.hiscore_line(scorefile_entry::DDV_ONELINE);
 }
 
-static bool _hiscore_same_day(time_t t1, time_t t2)
+/*static*/ bool _hiscore_same_day(time_t t1, time_t t2)
 {
     struct tm *d1  = TIME_FN(&t1);
     const int year = d1->tm_year;
@@ -525,7 +525,7 @@ static bool _hiscore_same_day(time_t t1, time_t t2)
     return d2->tm_mday == day && d2->tm_mon == mon && d2->tm_year == year;
 }
 
-static string _hiscore_date_string(time_t time)
+/*static*/ string _hiscore_date_string(time_t time)
 {
     struct tm *date = TIME_FN(&time);
 
@@ -536,7 +536,7 @@ static string _hiscore_date_string(time_t time)
                                      date->tm_year + 1900);
 }
 
-static string _hiscore_newline_string()
+/*static*/ string _hiscore_newline_string()
 {
     return "\n             ";
 }
@@ -551,7 +551,7 @@ string hiscores_format_single_long(const scorefile_entry &se, bool verbose)
 // BEGIN private functions
 // --------------------------------------------------------------------------
 
-static FILE *_hs_open(const char *mode, const string &scores)
+/*static*/ FILE *_hs_open(const char *mode, const string &scores)
 {
     // allow reading from standard input
     if (scores == "-")
@@ -560,12 +560,12 @@ static FILE *_hs_open(const char *mode, const string &scores)
     return lk_open(mode, scores);
 }
 
-static void _hs_close(FILE *handle, const string &scores)
+/*static*/ void _hs_close(FILE *handle, const string &scores)
 {
     lk_close(handle, scores);
 }
 
-static bool _hs_read(FILE *scores, scorefile_entry &dest)
+/*static*/ bool _hs_read(FILE *scores, scorefile_entry &dest)
 {
     char inbuf[1300];
     if (!scores || feof(scores))
@@ -580,17 +580,17 @@ static bool _hs_read(FILE *scores, scorefile_entry &dest)
     return dest.parse(inbuf);
 }
 
-static int _val_char(char digit)
+/*static*/ int _val_char(char digit)
 {
     return digit - '0';
 }
 
-static time_t _parse_time(const string &st)
+/*static*/ time_t _parse_time(const string &st)
 {
     struct tm  date;
 
     if (st.length() < 15)
-        return static_cast<time_t>(0);
+        return /*static*/_cast<time_t>(0);
 
     date.tm_year  =   _val_char(st[0]) * 1000 + _val_char(st[1]) * 100
                     + _val_char(st[2]) *   10 + _val_char(st[3]) - 1900;
@@ -605,12 +605,12 @@ static time_t _parse_time(const string &st)
     return mktime(&date);
 }
 
-static void _hs_write(FILE *scores, scorefile_entry &se)
+/*static*/ void _hs_write(FILE *scores, scorefile_entry &se)
 {
     fprintf(scores, "%s", se.raw_string().c_str());
 }
 
-static const char *kill_method_names[] =
+/*static*/ const char *kill_method_names[] =
 {
     "mon", "pois", "cloud", "beam", "lava", "water",
     "stupidity", "weakness", "clumsiness", "trap", "leaving", "winning",
@@ -624,7 +624,7 @@ static const char *kill_method_names[] =
     "collision",
 };
 
-static const char *_kill_method_name(kill_method_type kmt)
+/*static*/ const char *_kill_method_name(kill_method_type kmt)
 {
     COMPILE_CHECK(NUM_KILLBY == ARRAYSZ(kill_method_names));
 
@@ -634,14 +634,14 @@ static const char *_kill_method_name(kill_method_type kmt)
     return kill_method_names[kmt];
 }
 
-static kill_method_type _str_to_kill_method(const string &s)
+/*static*/ kill_method_type _str_to_kill_method(const string &s)
 {
     COMPILE_CHECK(NUM_KILLBY == ARRAYSZ(kill_method_names));
 
     for (int i = 0; i < NUM_KILLBY; ++i)
     {
         if (s == kill_method_names[i])
-            return static_cast<kill_method_type>(i);
+            return /*static*/_cast<kill_method_type>(i);
     }
 
     return NUM_KILLBY;
@@ -650,7 +650,7 @@ static kill_method_type _str_to_kill_method(const string &s)
 //////////////////////////////////////////////////////////////////////////
 // scorefile_entry
 
-/*scorefile_entry::*/scorefile_entry(int dam, mid_t dsource, int dtype,
+scorefile_entry::scorefile_entry(int dam, mid_t dsource, int dtype,
                                  const char *aux, bool death_cause_only,
                                  const char *dsource_name, time_t dt)
 {
@@ -811,7 +811,7 @@ bool scorefile_entry::parse_scoreline(const string &line)
     return true;
 }
 
-static const char* _short_branch_name(int branch)
+/*static*/ const char* _short_branch_name(int branch)
 {
     if (branch >= 0 && branch < NUM_BRANCHES)
         return branches[branch].abbrevname;
@@ -831,7 +831,7 @@ enum old_job_type
     NUM_OLD_JOBS = -OLD_JOB_HEALER
 };
 
-static const char* _job_name(int job)
+/*static*/ const char* _job_name(int job)
 {
     switch (job)
     {
@@ -853,10 +853,10 @@ static const char* _job_name(int job)
         return "Healer";
     }
 
-    return get_job_name(static_cast<job_type>(job));
+    return get_job_name(/*static*/_cast<job_type>(job));
 }
 
-static const char* _job_abbrev(int job)
+/*static*/ const char* _job_abbrev(int job)
 {
     switch (job)
     {
@@ -878,10 +878,10 @@ static const char* _job_abbrev(int job)
         return "He";
     }
 
-    return get_job_abbrev(static_cast<job_type>(job));
+    return get_job_abbrev(/*static*/_cast<job_type>(job));
 }
 
-static int _job_by_name(const string& name)
+/*static*/ int _job_by_name(const string& name)
 {
     int job = get_job_by_name(name.c_str());
 
@@ -909,7 +909,7 @@ enum old_species_type
     NUM_OLD_SPECIES = -OLD_SP_LAVA_ORC
 };
 
-static string _species_name(int race)
+/*static*/ string _species_name(int race)
 {
     switch (race)
     {
@@ -924,10 +924,10 @@ static string _species_name(int race)
     case OLD_SP_LAVA_ORC: return "Lava Orc";
     }
 
-    return species_name(static_cast<species_type>(race));
+    return species_name(/*static*/_cast<species_type>(race));
 }
 
-static const char* _species_abbrev(int race)
+/*static*/ const char* _species_abbrev(int race)
 {
     switch (race)
     {
@@ -942,10 +942,10 @@ static const char* _species_abbrev(int race)
     case OLD_SP_LAVA_ORC: return "LO";
     }
 
-    return get_species_abbrev(static_cast<species_type>(race));
+    return get_species_abbrev(/*static*/_cast<species_type>(race));
 }
 
-static int _species_by_name(const string& name)
+/*static*/ int _species_by_name(const string& name)
 {
     int race = str_to_species(name);
 
@@ -1248,7 +1248,7 @@ string scorefile_entry::short_kill_message() const
  *       of the the first occurrence. Otherwise, \c str is unchanged.
  * @return \c true if \c str was modified, \c false otherwise.
  */
-static bool _strip_to(string &str, const char *infix)
+/*static*/ bool _strip_to(string &str, const char *infix)
 {
     // Don't treat stripping the empty string as a change.
     if (*infix == '\0')
@@ -1484,7 +1484,7 @@ void scorefile_entry::reset()
     potions_used         = 0;
 }
 
-static int _award_modified_experience()
+/*static*/ int _award_modified_experience()
 {
     int xp = you.experience;
     int result = 0;
@@ -1862,7 +1862,7 @@ string scorefile_entry::single_cdesc() const
                         (wiz_mode == 1) ? "W" : (explore_mode == 1) ? "E" : "");
 }
 
-static string _append_sentence_delimiter(const string &sentence,
+/*static*/ string _append_sentence_delimiter(const string &sentence,
                                          const string &delimiter)
 {
     if (sentence.empty())
@@ -2207,7 +2207,7 @@ string scorefile_entry::death_description(death_desc_verbosity verbosity) const
         if (terse)
             desc += "stupidity";
         else if (race >= 0 && // not a removed race
-                 species_is_unbreathing(static_cast<species_type>(race)))
+                 species_is_unbreathing(/*static*/_cast<species_type>(race)))
         {
             desc += "Forgot to exist";
         }
@@ -2241,7 +2241,7 @@ string scorefile_entry::death_description(death_desc_verbosity verbosity) const
         {
             if (num_runes > 0)
                 desc += "Got out of the dungeon";
-            else if (species_is_undead(static_cast<species_type>(race)))
+            else if (species_is_undead(/*static*/_cast<species_type>(race)))
                 desc += "Safely got out of the dungeon";
             else
                 desc += "Got out of the dungeon alive";
@@ -2765,18 +2765,18 @@ xlog_fields::xlog_fields(const string &line) : fields(), fieldmap()
 }
 
 // xlogfile escape: s/:/::/g
-static string _xlog_escape(const string &s)
+/*static*/ string _xlog_escape(const string &s)
 {
     return replace_all(s, ":", "::");
 }
 
 // xlogfile unescape: s/::/:/g
-static string _xlog_unescape(const string &s)
+/*static*/ string _xlog_unescape(const string &s)
 {
     return replace_all(s, "::", ":");
 }
 
-static string::size_type _xlog_next_separator(const string &s,
+/*static*/ string::size_type _xlog_next_separator(const string &s,
                                               string::size_type start)
 {
     string::size_type p = s.find(':', start);
@@ -2786,7 +2786,7 @@ static string::size_type _xlog_next_separator(const string &s,
     return p;
 }
 
-static vector<string> _xlog_split_fields(const string &s)
+/*static*/ vector<string> _xlog_split_fields(const string &s)
 {
     string::size_type start = 0, end = 0;
     vector<string> fs;
@@ -2878,8 +2878,8 @@ void mark_milestone(const string &type, const string &milestone,
                     const string &origin_level, time_t milestone_time)
 {
 #ifdef DGL_MILESTONES
-    static string lasttype, lastmilestone;
-    static long lastturn = -1;
+    /*static*/ string lasttype, lastmilestone;
+    /*static*/ long lastturn = -1;
 
     if (crawl_state.game_is_arena()
         || !crawl_state.need_save
