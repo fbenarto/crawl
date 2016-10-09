@@ -58,19 +58,19 @@
 
 #define SCORE_VERSION "0.1"
 
-class score{
-
 // enough memory allocated to snarf in the scorefile entries
-/*static*/ unique_ptr<scorefile_entry> hs_list[SCORE_FILE_ENTRIES];
+static unique_ptr<scorefile_entry> hs_list[SCORE_FILE_ENTRIES];
 
-/*static*/ FILE *_hs_open(const char *mode, const string &filename);
-/*static*/ void  _hs_close(FILE *handle, const string &filename);
-/*static*/ bool  _hs_read(FILE *scores, scorefile_entry &dest);
-/*static*/ void  _hs_write(FILE *scores, scorefile_entry &entry);
-/*static*/ time_t _parse_time(const string &st);
-/*static*/ string _xlog_escape(const string &s);
-/*static*/ string _xlog_unescape(const string &s);
-/*static*/ vector<string> _xlog_split_fields(const string &s);
+static FILE *_hs_open(const char *mode, const string &filename);
+static void  _hs_close(FILE *handle, const string &filename);
+static bool  _hs_read(FILE *scores, scorefile_entry &dest);
+static void  _hs_write(FILE *scores, scorefile_entry &entry);
+static time_t _parse_time(const string &st);
+static string _xlog_escape(const string &s);
+static string _xlog_unescape(const string &s);
+static vector<string> _xlog_split_fields(const string &s);
+
+class score{
 
 /*static*/ string _score_file_name()
 {
