@@ -70,8 +70,8 @@ static string _xlog_escape(const string &s);
 static string _xlog_unescape(const string &s);
 static vector<string> _xlog_split_fields(const string &s);
 
-class score()
-{
+class score{
+public:
 static string _score_file_name()
 {
     string ret;
