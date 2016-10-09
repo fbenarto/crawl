@@ -70,6 +70,8 @@ static string _xlog_escape(const string &s);
 static string _xlog_unescape(const string &s);
 static vector<string> _xlog_split_fields(const string &s);
 
+class score()
+{
 static string _score_file_name()
 {
     string ret;
@@ -2935,3 +2937,4 @@ string xlog_status_line()
     return xl.xlog_line();
 }
 #endif // DGL_WHEREIS
+}
