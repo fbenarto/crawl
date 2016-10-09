@@ -650,7 +650,7 @@ static kill_method_type _str_to_kill_method(const string &s)
 //////////////////////////////////////////////////////////////////////////
 // scorefile_entry
 
-scorefile_entry::scorefile_entry(int dam, mid_t dsource, int dtype,
+typename scorefile_entry::scorefile_entry(int dam, mid_t dsource, int dtype,
                                  const char *aux, bool death_cause_only,
                                  const char *dsource_name, time_t dt)
 {
