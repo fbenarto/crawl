@@ -53,8 +53,8 @@
 #ifdef USE_TILE_LOCAL
  #include "tilereg-crt.h"
 #endif
-//#include "unwind.h"
-#include "version.h"
+#include "unwind.h"
+//#include "version.h"
 
 #define SCORE_VERSION "0.1"
 
