@@ -6,7 +6,7 @@
 #ifndef HISCORES_H
 #define HISCORES_H
 
-class scorefile_entry;
+static class scorefile_entry;
 
 int hiscores_new_entry(const scorefile_entry &se);
 

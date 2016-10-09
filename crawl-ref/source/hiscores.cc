@@ -58,6 +58,8 @@
 
 #define SCORE_VERSION "0.1"
 
+class score{
+
 // enough memory allocated to snarf in the scorefile entries
 static unique_ptr<scorefile_entry> hs_list[SCORE_FILE_ENTRIES];
 
@@ -70,7 +72,6 @@ static string _xlog_escape(const string &s);
 static string _xlog_unescape(const string &s);
 static vector<string> _xlog_split_fields(const string &s);
 
-struct score{
 static string _score_file_name()
 {
     string ret;
