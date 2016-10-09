@@ -524,7 +524,7 @@ void show_hiscore_table()
 
 string hiscores_format_single(const scorefile_entry &se)
 {
-    return se.hiscore_line(scorefile_entry.DDV_ONELINE);
+    return se.hiscore_line(sc_e.DDV_ONELINE);
 }
 
 /*static*/ bool _hiscore_same_day(time_t t1, time_t t2)
@@ -557,8 +557,8 @@ string hiscores_format_single(const scorefile_entry &se)
 
 string hiscores_format_single_long(const scorefile_entry &se, bool verbose)
 {
-    return se.hiscore_line(verbose ? scorefile_entry.DDV_VERBOSE
-                                   : scorefile_entry.DDV_NORMAL);
+    return se.hiscore_line(verbose ? sc_e.DDV_VERBOSE
+                                   : sc_e.DDV_NORMAL);
 }
 
 // --------------------------------------------------------------------------
@@ -651,9 +651,9 @@ string hiscores_format_single_long(const scorefile_entry &se, bool verbose)
 
 //////////////////////////////////////////////////////////////////////////
 // scorefile_entry
-scorefile_entry scorefile_entry;
+scorefile_entry sc_e;
 
-scorefile_entry.scorefile_entry(int dam, mid_t dsource, int dtype,
+sc_e.scorefile_entry(int dam, mid_t dsource, int dtype,
                                  const char *aux, bool death_cause_only,
                                  const char *dsource_name, time_t dt)
 {
@@ -664,24 +664,24 @@ scorefile_entry.scorefile_entry(int dam, mid_t dsource, int dtype,
         init(dt);
 }
 
-scorefile_entry.scorefile_entry()
+sc_e.scorefile_entry()
 {
     // Completely uninitialised, caveat user.
     reset();
 }
 
-scorefile_entry.scorefile_entry(const scorefile_entry &se)
+sc_e.scorefile_entry(const scorefile_entry &se)
 {
     init_from(se);
 }
 
-scorefile_entry &scorefile_entry.operator = (const scorefile_entry &se)
+scorefile_entry &sc_e.operator = (const scorefile_entry &se)
 {
     init_from(se);
     return *this;
 }
 
-void scorefile_entry.init_from(const scorefile_entry &se)
+void sc_e.init_from(const scorefile_entry &se)
 {
     version            = se.version;
     save_rcs_version   = se.save_rcs_version;
@@ -754,12 +754,12 @@ void scorefile_entry.init_from(const scorefile_entry &se)
     raw_line          = se.raw_line;
 }
 
-actor* scorefile_entry.killer() const
+actor* sc_e.killer() const
 {
     return actor_by_mid(death_source);
 }
 
-xlog_fields scorefile_entry.get_fields() const
+xlog_fields sc_e.get_fields() const
 {
     if (!fields.get())
         return xlog_fields();
@@ -767,7 +767,7 @@ xlog_fields scorefile_entry.get_fields() const
         return *fields.get();
 }
 
-bool scorefile_entry.parse(const string &line)
+bool sc_e.parse(const string &line)
 {
     // Scorefile formats down the ages:
     //
@@ -793,7 +793,7 @@ bool scorefile_entry.parse(const string &line)
     return parse_scoreline(line);
 }
 
-string scorefile_entry.raw_string() const
+string sc_e.raw_string() const
 {
     if (!raw_line.empty())
         return raw_line;
@@ -806,7 +806,7 @@ string scorefile_entry.raw_string() const
     return fields->xlog_line() + "\n";
 }
 
-bool scorefile_entry.parse_scoreline(const string &line)
+bool sc_e.parse_scoreline(const string &line)
 {
     fields.reset(new xlog_fields(line));
     init_with_fields();
@@ -962,7 +962,7 @@ enum old_species_type
     return SP_UNKNOWN;
 }
 
-void scorefile_entry.init_with_fields()
+void sc_e.init_with_fields()
 {
     version = fields->str_field("v");
     save_rcs_version = fields->str_field("vsavrv");
@@ -1054,7 +1054,7 @@ void scorefile_entry.init_with_fields()
     fixup_char_name();
 }
 
-void scorefile_entry.set_base_xlog_fields() const
+void sc_e.set_base_xlog_fields() const
 {
     if (!fields.get())
         fields.reset(new xlog_fields);
@@ -1150,7 +1150,7 @@ void scorefile_entry.set_base_xlog_fields() const
     fields->add_field("potionsused", "%d", potions_used);
 }
 
-void scorefile_entry.set_score_fields() const
+void sc_e.set_score_fields() const
 {
     fields.reset(new xlog_fields);
 
@@ -1209,7 +1209,7 @@ void scorefile_entry.set_score_fields() const
 #endif
 }
 
-string scorefile_entry.make_oneline(const string &ml) const
+string sc_e.make_oneline(const string &ml) const
 {
     vector<string> lines = split_string("\n", ml);
     for (string &s : lines)
@@ -1223,7 +1223,7 @@ string scorefile_entry.make_oneline(const string &ml) const
     return comma_separated_line(lines.begin(), lines.end(), " ", " ");
 }
 
-string scorefile_entry.long_kill_message() const
+string sc_e.long_kill_message() const
 {
     string msg = death_description(DDV_LOGVERBOSE);
     msg = make_oneline(msg);
@@ -1232,7 +1232,7 @@ string scorefile_entry.long_kill_message() const
     return msg;
 }
 
-string scorefile_entry.short_kill_message() const
+string sc_e.short_kill_message() const
 {
     string msg = death_description(DDV_ONELINE);
     msg = make_oneline(msg);
@@ -1266,7 +1266,7 @@ string scorefile_entry.short_kill_message() const
     return false;
 }
 
-void scorefile_entry.init_death_cause(int dam, mid_t dsrc,
+void sc_e.init_death_cause(int dam, mid_t dsrc,
                                        int dtype, const char *aux,
                                        const char *dsrc_name)
 {
@@ -1418,7 +1418,7 @@ void scorefile_entry.init_death_cause(int dam, mid_t dsrc,
     }
 }
 
-void scorefile_entry.reset()
+void sc_e.reset()
 {
     // simple init
     raw_line.clear();
@@ -1521,7 +1521,7 @@ void scorefile_entry.reset()
     return result;
 }
 
-void scorefile_entry.init(time_t dt)
+void sc_e.init(time_t dt)
 {
     // Score file entry version:
     //
@@ -1726,7 +1726,7 @@ void scorefile_entry.init(time_t dt)
     explore_mode = (you.explore ? 1 : 0);
 }
 
-string scorefile_entry.hiscore_line(death_desc_verbosity verbosity) const
+string sc_e.hiscore_line(death_desc_verbosity verbosity) const
 {
     string line = character_description(verbosity);
     line += death_description(verbosity);
@@ -1736,7 +1736,7 @@ string scorefile_entry.hiscore_line(death_desc_verbosity verbosity) const
     return line;
 }
 
-string scorefile_entry.game_time(death_desc_verbosity verbosity) const
+string sc_e.game_time(death_desc_verbosity verbosity) const
 {
     string line;
 
@@ -1751,7 +1751,7 @@ string scorefile_entry.game_time(death_desc_verbosity verbosity) const
     return line;
 }
 
-const char *scorefile_entry.damage_verb() const
+const char *sc_e.damage_verb() const
 {
     // GDL: here's an example of using final_hp. Verbiage could be better.
     // bwr: changed "blasted" since this is for melee
@@ -1761,18 +1761,18 @@ const char *scorefile_entry.damage_verb() const
                             : "Annihilated";
 }
 
-string scorefile_entry.death_source_desc() const
+string sc_e.death_source_desc() const
 {
     return death_source_name;
 }
 
-string scorefile_entry.damage_string(bool terse) const
+string sc_e.damage_string(bool terse) const
 {
     return make_stringf("(%d%s)", damage,
                         terse? "" : " damage");
 }
 
-string scorefile_entry.strip_article_a(const string &s) const
+string sc_e.strip_article_a(const string &s) const
 {
     if (starts_with(s, "a "))
         return s.substr(2);
@@ -1781,7 +1781,7 @@ string scorefile_entry.strip_article_a(const string &s) const
     return s;
 }
 
-string scorefile_entry.terse_missile_name() const
+string sc_e.terse_missile_name() const
 {
     const string pre_post[][2] =
     {
@@ -1811,7 +1811,7 @@ string scorefile_entry.terse_missile_name() const
     return missile;
 }
 
-string scorefile_entry.terse_missile_cause() const
+string sc_e.terse_missile_cause() const
 {
     const string &aux = auxkilldata;
 
@@ -1832,7 +1832,7 @@ string scorefile_entry.terse_missile_cause() const
     return mcause;
 }
 
-string scorefile_entry.terse_beam_cause() const
+string sc_e.terse_beam_cause() const
 {
     string cause = auxkilldata;
     if (starts_with(cause, "by ") || starts_with(cause, "By "))
@@ -1840,12 +1840,12 @@ string scorefile_entry.terse_beam_cause() const
     return cause;
 }
 
-string scorefile_entry.terse_wild_magic() const
+string sc_e.terse_wild_magic() const
 {
     return terse_beam_cause();
 }
 
-void scorefile_entry.fixup_char_name()
+void sc_e.fixup_char_name()
 {
     if (race_class_name.empty())
     {
@@ -1855,7 +1855,7 @@ void scorefile_entry.fixup_char_name()
     }
 }
 
-string scorefile_entry.single_cdesc() const
+string sc_e.single_cdesc() const
 {
     string scname;
     scname = chop_string(name, 10);
@@ -1879,7 +1879,7 @@ string scorefile_entry.single_cdesc() const
 }
 
 string
-scorefile_entry.character_description(death_desc_verbosity verbosity) const
+sc_e.character_description(death_desc_verbosity verbosity) const
 {
     bool single  = verbosity == DDV_TERSE || verbosity == DDV_ONELINE;
 
@@ -1963,7 +1963,7 @@ scorefile_entry.character_description(death_desc_verbosity verbosity) const
     return desc;
 }
 
-string scorefile_entry.death_place(death_desc_verbosity verbosity) const
+string sc_e.death_place(death_desc_verbosity verbosity) const
 {
     bool verbose = (verbosity == DDV_VERBOSE);
     string place;
@@ -2002,7 +2002,7 @@ string scorefile_entry.death_place(death_desc_verbosity verbosity) const
  * @param verbosity     The verbosity of the description.
  * @return              A description of the cause of death.
  */
-string scorefile_entry.death_description(death_desc_verbosity verbosity) const
+string sc_e.death_description(death_desc_verbosity verbosity) const
 {
     bool needs_beam_cause_line = false;
     bool needs_called_by_monster_line = false;
