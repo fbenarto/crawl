@@ -70,6 +70,20 @@ static string _xlog_escape(const string &s);
 static string _xlog_unescape(const string &s);
 static vector<string> _xlog_split_fields(const string &s);
 
+/*static*/ const char *kill_method_names[] =
+{
+    "mon", "pois", "cloud", "beam", "lava", "water",
+    "stupidity", "weakness", "clumsiness", "trap", "leaving", "winning",
+    "quitting", "wizmode", "draining", "starvation", "freezing", "burning",
+    "wild_magic", "xom", "rotting", "targeting", "spore",
+    "tso_smiting", "petrification", "something",
+    "falling_down_stairs", "acid", "curare",
+    "beogh_smiting", "divine_wrath", "bounce", "reflect", "self_aimed",
+    "falling_through_gate", "disintegration", "headbutt", "rolling",
+    "mirror_damage", "spines", "frailty", "barbs", "being_thrown",
+    "collision",
+}; /*put this back in line 613, after _hs_write, before _kill_method_name*/
+    
 class score{
 
 /*static*/ string _score_file_name()
@@ -610,19 +624,7 @@ string hiscores_format_single_long(const scorefile_entry &se, bool verbose)
     fprintf(scores, "%s", se.raw_string().c_str());
 }
 
-/*static*/ const char *kill_method_names[] =
-{
-    "mon", "pois", "cloud", "beam", "lava", "water",
-    "stupidity", "weakness", "clumsiness", "trap", "leaving", "winning",
-    "quitting", "wizmode", "draining", "starvation", "freezing", "burning",
-    "wild_magic", "xom", "rotting", "targeting", "spore",
-    "tso_smiting", "petrification", "something",
-    "falling_down_stairs", "acid", "curare",
-    "beogh_smiting", "divine_wrath", "bounce", "reflect", "self_aimed",
-    "falling_through_gate", "disintegration", "headbutt", "rolling",
-    "mirror_damage", "spines", "frailty", "barbs", "being_thrown",
-    "collision",
-};
+
 
 /*static*/ const char *_kill_method_name(kill_method_type kmt)
 {
