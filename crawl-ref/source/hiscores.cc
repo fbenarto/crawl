@@ -651,7 +651,7 @@ string hiscores_format_single_long(const scorefile_entry &se, bool verbose)
 
 //////////////////////////////////////////////////////////////////////////
 // scorefile_entry
-scorefile_entry sc_e;
+typename scorefile_entry::scorefile_entry sc_e;
 
 sc_e.scorefile_entry(int dam, mid_t dsource, int dtype,
                                  const char *aux, bool death_cause_only,
