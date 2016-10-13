@@ -84,7 +84,7 @@ static vector<string> _xlog_split_fields(const string &s);
     "collision",
 }; /*put this back in line 613, after _hs_write, before _kill_method_name*/
 
-class score{
+class score : public scorefile_entry{
 
 /*static*/ string _score_file_name()
 {
