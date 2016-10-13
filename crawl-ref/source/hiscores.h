@@ -8,7 +8,7 @@
 
 class scorefile_entry
 {
-    scorefile_entry::scorefile_entry(int dam, mid_t dsource, int dtype,
+    scorefile_entry(int dam, mid_t dsource, int dtype,
                                      const char *aux, bool death_cause_only,
                                      const char *dsource_name, time_t dt)
     {
@@ -19,18 +19,18 @@ class scorefile_entry
             init(dt);
     }
 
-    scorefile_entry::scorefile_entry()
+    scorefile_entry()
     {
         // Completely uninitialised, caveat user.
         reset();
     }
 
-    scorefile_entry::scorefile_entry(const scorefile_entry &se)
+    scorefile_entry(const scorefile_entry &se)
     {
         init_from(se);
     }
 
-    scorefile_entry &scorefile_entry::operator = (const scorefile_entry &se)
+    scorefile_entry &operator = (const scorefile_entry &se)
     {
         init_from(se);
         return *this;
