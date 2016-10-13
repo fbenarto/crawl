@@ -28,9 +28,9 @@ notifications:
 #        recipients:
 #          - crawl-ref-commits@lists.sourceforge.net
     irc:
-        channels: "chat.freenode.net##crawl-dev"
-        on_success: change
-        on_failure: always
+        channels: ""
+        on_success: never
+        on_failure: never
         use_notice: true
         template:
             - "%{message} (%{branch} - %{commit} #%{build_number} : %{author}): %{build_url}"
