@@ -6,36 +6,7 @@
 #ifndef HISCORES_H
 #define HISCORES_H
 
-class scorefile_entry
-{
-    scorefile_entry(int dam, mid_t dsource, int dtype,
-                                     const char *aux, bool death_cause_only,
-                                     const char *dsource_name, time_t dt)
-    {
-        reset();
-
-        init_death_cause(dam, dsource, dtype, aux, dsource_name);
-        if (!death_cause_only)
-            init(dt);
-    }
-
-    scorefile_entry()
-    {
-        // Completely uninitialised, caveat user.
-        reset();
-    }
-
-    scorefile_entry(const scorefile_entry &se)
-    {
-        init_from(se);
-    }
-
-    scorefile_entry &operator = (const scorefile_entry &se)
-    {
-        init_from(se);
-        return *this;
-    }
-};
+class scorefile_entry;
 
 int hiscores_new_entry(const scorefile_entry &se);
 
