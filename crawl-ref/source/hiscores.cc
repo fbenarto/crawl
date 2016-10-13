@@ -2938,4 +2938,4 @@ class score
 	    return xl.xlog_line();
 	}
 	#endif // DGL_WHEREIS
-};
+}
