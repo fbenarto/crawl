@@ -27,10 +27,10 @@ notifications:
         on_failure: always
 #        recipients:
 #          - crawl-ref-commits@lists.sourceforge.net
-    irc:
-        channels: ""
-        on_success: never
-        on_failure: never
-        use_notice: true
-        template:
-            - "%{message} (%{branch} - %{commit} #%{build_number} : %{author}): %{build_url}"
++#  irc:
++#        channels: ""
++#        on_success: never
++#        on_failure: never
++#        use_notice: true
++#        template:
++#            - "%{message} (%{branch} - %{commit} #%{build_number} : %{author}): %{build_url}"
