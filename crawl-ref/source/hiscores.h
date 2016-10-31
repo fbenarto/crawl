@@ -132,21 +132,21 @@ private:
     mutable unique_ptr<xlog_fields> fields;
 
 public:
-    static scorefile_entry();
-    static scorefile_entry(int damage, mid_t death_source, int death_type,
+    scorefile_entry();
+    scorefile_entry(int damage, mid_t death_source, int death_type,
                     const char *aux, bool death_cause_only = false,
                     const char *death_source_name = nullptr,
                     time_t death_time = 0);
-    static scorefile_entry(const scorefile_entry &se);
+    scorefile_entry(const scorefile_entry &se);
 
-    static scorefile_entry &operator = (const scorefile_entry &other);
+    scorefile_entry &operator = (const scorefile_entry &other);
 
-    static void init_death_cause(int damage, mid_t death_source, int death_type,
+    void init_death_cause(int damage, mid_t death_source, int death_type,
                           const char *aux, const char *death_source_name);
-    static void init(time_t death_time = 0);
-    static void reset();
+    void init(time_t death_time = 0);
+    void reset();
 
-    static enum death_desc_verbosity
+    enum death_desc_verbosity
     {
         DDV_TERSE,
         DDV_ONELINE,
@@ -155,27 +155,27 @@ public:
         DDV_LOGVERBOSE     // Semi-verbose for logging purposes
     };
 
-    static string raw_string() const;
-    static bool parse(const string &line);
+    string raw_string() const;
+    bool parse(const string &line);
 
-    static string hiscore_line(death_desc_verbosity verbosity) const;
+    string hiscore_line(death_desc_verbosity verbosity) const;
 
-    static string character_description(death_desc_verbosity) const;
+    string character_description(death_desc_verbosity) const;
     // Full description of death: Killed by an xyz wielding foo
-    static string death_description(death_desc_verbosity) const;
-    static string death_place(death_desc_verbosity) const;
-    static string game_time(death_desc_verbosity) const;
+    string death_description(death_desc_verbosity) const;
+    string death_place(death_desc_verbosity) const;
+    string game_time(death_desc_verbosity) const;
 
-    static string get_name() const       { return name; }
-    static int    get_score() const      { return points; }
-    static int    get_death_type() const { return death_type; }
-    static time_t get_death_time() const { return death_time; }
-    static actor* killer() const; // Obviously does not work across games.
-    static xlog_fields get_fields() const;
+    string get_name() const       { return name; }
+    int    get_score() const      { return points; }
+    int    get_death_type() const { return death_type; }
+    time_t get_death_time() const { return death_time; }
+    actor* killer() const; // Obviously does not work across games.
+    xlog_fields get_fields() const;
 
-    static void set_base_xlog_fields() const;
-    static string short_kill_message() const;
-    static string long_kill_message() const;
+    void set_base_xlog_fields() const;
+    string short_kill_message() const;
+    string long_kill_message() const;
 
 private:
     string single_cdesc() const;
