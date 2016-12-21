@@ -1,0 +1,2713 @@
+In file included from DreamSheep.h:16:0:
+database.h:23:5: error: #error DBM interfaces unavailable!
+ #   error DBM interfaces unavailable!
+     ^
+In file included from enum.h:12:0,
+                 from mon-cast.h:9,
+                 from DreamSheep.h:3:
+tag-version.h:205:14: error: expected constructor, destructor, or type conversion before ‘(’ token
+ COMPILE_CHECK(TAG_MINOR_VERSION <= 0xff);
+              ^
+In file included from mon-cast.h:9:0,
+                 from DreamSheep.h:3:
+enum.h:31:22: error: expected nested-name-specifier before ‘underlying_type’
+     typedef typename underlying_type<E>::type underlying_type;
+                      ^
+enum.h:31:22: error: expected ‘;’ at end of member declaration
+enum.h:31:37: error: expected unqualified-id before ‘<’ token
+     typedef typename underlying_type<E>::type underlying_type;
+                                     ^
+enum.h:102:47: error: ‘forward_iterator_tag’ was not declared in this scope
+         class iterator : public std::iterator<forward_iterator_tag, const E>
+                                               ^
+enum.h:102:47: note: suggested alternative:
+In file included from /usr/include/c++/4.9/iterator:61:0,
+                 from enum.h:9,
+                 from mon-cast.h:9,
+                 from DreamSheep.h:3:
+/usr/include/c++/4.9/bits/stl_iterator_base_types.h:95:10: note:   ‘std::forward_iterator_tag’
+   struct forward_iterator_tag : public input_iterator_tag { };
+          ^
+In file included from mon-cast.h:9:0,
+                 from DreamSheep.h:3:
+enum.h:102:76: error: template argument 1 is invalid
+         class iterator : public std::iterator<forward_iterator_tag, const E>
+                                                                            ^
+enum.h:133:27: error: expected nested-name-specifier before ‘enable_if’
+         template<typename enable_if<LastExponent >= 0, int>::type = 0>
+                           ^
+enum.h:133:36: error: expected ‘>’ before ‘<’ token
+         template<typename enable_if<LastExponent >= 0, int>::type = 0>
+                                    ^
+enum.h:149:18: error: expected constructor, destructor, or type conversion before ‘(’ token
+     COMPILE_CHECK(is_enum<flagT>::value)
+                  ^
+enum.h:155:24: note: in definition of macro ‘EXPANDMACRO’
+ #define EXPANDMACRO(x) x
+                        ^
+enum.h:182:17: note: in expansion of macro ‘DEF_BITFIELD_OPERATORS’
+     EXPANDMACRO(DEF_BITFIELD_OPERATORS(fieldT, __VA_ARGS__, ))
+                 ^
+enum.h:2502:1: note: in expansion of macro ‘DEF_BITFIELD’
+ DEF_BITFIELD(mon_holy_type, mon_holy_type_flags, 7);
+ ^
+enum.h:5086:6: error: use of enum ‘tile_flags’ without previous declaration
+ enum tile_flags ENUM_INT64
+      ^
+enum.h:5087:1: error: invalid type in declaration before ‘{’ token
+ {
+ ^
+enum.h:5091:5: error: ‘TILE_FLAG_ATT_MASK’ was not declared in this scope
+     TILE_FLAG_ATT_MASK   = 0x00030000ULL,
+     ^
+enum.h:5092:5: error: ‘TILE_FLAG_PET’ was not declared in this scope
+     TILE_FLAG_PET        = 0x00010000ULL,
+     ^
+enum.h:5093:5: error: ‘TILE_FLAG_GD_NEUTRAL’ was not declared in this scope
+     TILE_FLAG_GD_NEUTRAL = 0x00020000ULL,
+     ^
+enum.h:5094:5: error: ‘TILE_FLAG_NEUTRAL’ was not declared in this scope
+     TILE_FLAG_NEUTRAL    = 0x00030000ULL,
+     ^
+enum.h:5096:5: error: ‘TILE_FLAG_S_UNDER’ was not declared in this scope
+     TILE_FLAG_S_UNDER    = 0x00040000ULL,
+     ^
+enum.h:5097:5: error: ‘TILE_FLAG_FLYING’ was not declared in this scope
+     TILE_FLAG_FLYING     = 0x00080000ULL,
+     ^
+enum.h:5100:5: error: ‘TILE_FLAG_BEH_MASK’ was not declared in this scope
+     TILE_FLAG_BEH_MASK   = 0x00300000ULL,
+     ^
+enum.h:5101:5: error: ‘TILE_FLAG_STAB’ was not declared in this scope
+     TILE_FLAG_STAB       = 0x00100000ULL,
+     ^
+enum.h:5102:5: error: ‘TILE_FLAG_MAY_STAB’ was not declared in this scope
+     TILE_FLAG_MAY_STAB   = 0x00200000ULL,
+     ^
+enum.h:5103:5: error: ‘TILE_FLAG_FLEEING’ was not declared in this scope
+     TILE_FLAG_FLEEING    = 0x00300000ULL,
+     ^
+enum.h:5105:5: error: ‘TILE_FLAG_NET’ was not declared in this scope
+     TILE_FLAG_NET        = 0x00400000ULL,
+     ^
+enum.h:5106:5: error: ‘TILE_FLAG_POISON’ was not declared in this scope
+     TILE_FLAG_POISON     = 0x00800000ULL,
+     ^
+enum.h:5107:5: error: ‘TILE_FLAG_WEB’ was not declared in this scope
+     TILE_FLAG_WEB        = 0x01000000ULL,
+     ^
+enum.h:5108:5: error: ‘TILE_FLAG_GLOWING’ was not declared in this scope
+     TILE_FLAG_GLOWING    = 0x02000000ULL,
+     ^
+enum.h:5109:5: error: ‘TILE_FLAG_STICKY_FLAME’ was not declared in this scope
+     TILE_FLAG_STICKY_FLAME = 0x04000000ULL,
+     ^
+enum.h:5110:5: error: ‘TILE_FLAG_BERSERK’ was not declared in this scope
+     TILE_FLAG_BERSERK    = 0x08000000ULL,
+     ^
+enum.h:5111:5: error: ‘TILE_FLAG_INNER_FLAME’ was not declared in this scope
+     TILE_FLAG_INNER_FLAME= 0x10000000ULL,
+     ^
+enum.h:5112:5: error: ‘TILE_FLAG_CONSTRICTED’ was not declared in this scope
+     TILE_FLAG_CONSTRICTED= 0x20000000ULL,
+     ^
+enum.h:5113:5: error: ‘TILE_FLAG_SLOWED’ was not declared in this scope
+     TILE_FLAG_SLOWED     = 0x8000000000ULL,
+     ^
+enum.h:5114:5: error: ‘TILE_FLAG_PAIN_MIRROR’ was not declared in this scope
+     TILE_FLAG_PAIN_MIRROR = 0x10000000000ULL,
+     ^
+enum.h:5115:5: error: ‘TILE_FLAG_HASTED’ was not declared in this scope
+     TILE_FLAG_HASTED     = 0x20000000000ULL,
+     ^
+enum.h:5116:5: error: ‘TILE_FLAG_MIGHT’ was not declared in this scope
+     TILE_FLAG_MIGHT      = 0x40000000000ULL,
+     ^
+enum.h:5117:5: error: ‘TILE_FLAG_PETRIFYING’ was not declared in this scope
+     TILE_FLAG_PETRIFYING = 0x80000000000ULL,
+     ^
+enum.h:5118:5: error: ‘TILE_FLAG_PETRIFIED’ was not declared in this scope
+     TILE_FLAG_PETRIFIED  = 0x100000000000ULL,
+     ^
+enum.h:5119:5: error: ‘TILE_FLAG_BLIND’ was not declared in this scope
+     TILE_FLAG_BLIND      = 0x200000000000ULL,
+     ^
+enum.h:5120:5: error: ‘TILE_FLAG_ANIM_WEP’ was not declared in this scope
+     TILE_FLAG_ANIM_WEP   = 0x400000000000ULL,
+     ^
+enum.h:5121:5: error: ‘TILE_FLAG_SUMMONED’ was not declared in this scope
+     TILE_FLAG_SUMMONED   = 0x800000000000ULL,
+     ^
+enum.h:5122:5: error: ‘TILE_FLAG_PERM_SUMMON’ was not declared in this scope
+     TILE_FLAG_PERM_SUMMON= 0x1000000000000ULL,
+     ^
+enum.h:5123:5: error: ‘TILE_FLAG_DEATHS_DOOR’ was not declared in this scope
+     TILE_FLAG_DEATHS_DOOR = 0x2000000000000ULL,
+     ^
+enum.h:5124:5: error: ‘TILE_FLAG_RECALL’ was not declared in this scope
+     TILE_FLAG_RECALL =     0x4000000000000ULL,
+     ^
+enum.h:5125:5: error: ‘TILE_FLAG_DRAIN’ was not declared in this scope
+     TILE_FLAG_DRAIN =      0x8000000000000ULL,
+     ^
+enum.h:5126:5: error: ‘TILE_FLAG_IDEALISED’ was not declared in this scope
+     TILE_FLAG_IDEALISED =  0x10000000000000ULL,
+     ^
+enum.h:5127:5: error: ‘TILE_FLAG_BOUND_SOUL’ was not declared in this scope
+     TILE_FLAG_BOUND_SOUL=  0x20000000000000ULL,
+     ^
+enum.h:5128:5: error: ‘TILE_FLAG_INFESTED’ was not declared in this scope
+     TILE_FLAG_INFESTED  =  0x40000000000000ULL,
+     ^
+enum.h:5131:5: error: ‘TILE_FLAG_MDAM_MASK’ was not declared in this scope
+     TILE_FLAG_MDAM_MASK  = 0x1C0000000ULL,
+     ^
+enum.h:5132:5: error: ‘TILE_FLAG_MDAM_LIGHT’ was not declared in this scope
+     TILE_FLAG_MDAM_LIGHT = 0x040000000ULL,
+     ^
+enum.h:5133:5: error: ‘TILE_FLAG_MDAM_MOD’ was not declared in this scope
+     TILE_FLAG_MDAM_MOD   = 0x080000000ULL,
+     ^
+enum.h:5134:5: error: ‘TILE_FLAG_MDAM_HEAVY’ was not declared in this scope
+     TILE_FLAG_MDAM_HEAVY = 0x0C0000000ULL,
+     ^
+enum.h:5135:5: error: ‘TILE_FLAG_MDAM_SEV’ was not declared in this scope
+     TILE_FLAG_MDAM_SEV   = 0x100000000ULL,
+     ^
+enum.h:5136:5: error: ‘TILE_FLAG_MDAM_ADEAD’ was not declared in this scope
+     TILE_FLAG_MDAM_ADEAD = 0x1C0000000ULL,
+     ^
+enum.h:5139:5: error: ‘TILE_FLAG_DEMON’ was not declared in this scope
+     TILE_FLAG_DEMON      = 0xE00000000ULL,
+     ^
+enum.h:5140:5: error: ‘TILE_FLAG_DEMON_5’ was not declared in this scope
+     TILE_FLAG_DEMON_5    = 0x200000000ULL,
+     ^
+enum.h:5141:5: error: ‘TILE_FLAG_DEMON_4’ was not declared in this scope
+     TILE_FLAG_DEMON_4    = 0x400000000ULL,
+     ^
+enum.h:5142:5: error: ‘TILE_FLAG_DEMON_3’ was not declared in this scope
+     TILE_FLAG_DEMON_3    = 0x600000000ULL,
+     ^
+enum.h:5143:5: error: ‘TILE_FLAG_DEMON_2’ was not declared in this scope
+     TILE_FLAG_DEMON_2    = 0x800000000ULL,
+     ^
+enum.h:5144:5: error: ‘TILE_FLAG_DEMON_1’ was not declared in this scope
+     TILE_FLAG_DEMON_1    = 0xE00000000ULL,
+     ^
+enum.h:5147:5: error: ‘TILE_FLAG_MIMIC_INEPT’ was not declared in this scope
+     TILE_FLAG_MIMIC_INEPT = 0x2000000000ULL,
+     ^
+enum.h:5148:5: error: ‘TILE_FLAG_MIMIC’ was not declared in this scope
+     TILE_FLAG_MIMIC       = 0x4000000000ULL,
+     ^
+enum.h:5149:5: error: ‘TILE_FLAG_MIMIC_RAVEN’ was not declared in this scope
+     TILE_FLAG_MIMIC_RAVEN = 0x6000000000ULL,
+     ^
+enum.h:5150:5: error: ‘TILE_FLAG_MIMIC_MASK’ was not declared in this scope
+     TILE_FLAG_MIMIC_MASK  = 0x6000000000ULL,
+     ^
+enum.h:5154:5: error: ‘TILE_FLAG_RAY’ was not declared in this scope
+     TILE_FLAG_RAY        = 0x00010000ULL,
+     ^
+enum.h:5155:5: error: ‘TILE_FLAG_MM_UNSEEN’ was not declared in this scope
+     TILE_FLAG_MM_UNSEEN  = 0x00020000ULL,
+     ^
+enum.h:5156:5: error: ‘TILE_FLAG_UNSEEN’ was not declared in this scope
+     TILE_FLAG_UNSEEN     = 0x00040000ULL,
+     ^
+enum.h:5159:5: error: ‘TILE_FLAG_CURSOR1’ was not declared in this scope
+     TILE_FLAG_CURSOR1    = 0x00180000ULL,
+     ^
+enum.h:5160:5: error: ‘TILE_FLAG_CURSOR2’ was not declared in this scope
+     TILE_FLAG_CURSOR2    = 0x00080000ULL,
+     ^
+enum.h:5161:5: error: ‘TILE_FLAG_CURSOR3’ was not declared in this scope
+     TILE_FLAG_CURSOR3    = 0x00100000ULL,
+     ^
+enum.h:5162:5: error: ‘TILE_FLAG_CURSOR’ was not declared in this scope
+     TILE_FLAG_CURSOR     = 0x00180000ULL,
+     ^
+enum.h:5164:5: error: ‘TILE_FLAG_TUT_CURSOR’ was not declared in this scope
+     TILE_FLAG_TUT_CURSOR = 0x00200000ULL,
+     ^
+enum.h:5165:5: error: ‘TILE_FLAG_TRAV_EXCL’ was not declared in this scope
+     TILE_FLAG_TRAV_EXCL  = 0x00400000ULL,
+     ^
+enum.h:5166:5: error: ‘TILE_FLAG_EXCL_CTR’ was not declared in this scope
+     TILE_FLAG_EXCL_CTR   = 0x00800000ULL,
+     ^
+enum.h:5167:5: error: ‘TILE_FLAG_RAY_OOR’ was not declared in this scope
+     TILE_FLAG_RAY_OOR    = 0x01000000ULL,
+     ^
+enum.h:5168:5: error: ‘TILE_FLAG_OOR’ was not declared in this scope
+     TILE_FLAG_OOR        = 0x02000000ULL,
+     ^
+enum.h:5169:5: error: ‘TILE_FLAG_WATER’ was not declared in this scope
+     TILE_FLAG_WATER      = 0x04000000ULL,
+     ^
+enum.h:5170:5: error: ‘TILE_FLAG_NEW_STAIR’ was not declared in this scope
+     TILE_FLAG_NEW_STAIR  = 0x08000000ULL,
+     ^
+enum.h:5173:5: error: ‘TILE_FLAG_TENTACLE_NW’ was not declared in this scope
+     TILE_FLAG_TENTACLE_NW  = 0x020000000ULL,
+     ^
+enum.h:5174:5: error: ‘TILE_FLAG_TENTACLE_NE’ was not declared in this scope
+     TILE_FLAG_TENTACLE_NE  = 0x040000000ULL,
+     ^
+enum.h:5175:5: error: ‘TILE_FLAG_TENTACLE_SE’ was not declared in this scope
+     TILE_FLAG_TENTACLE_SE  = 0x080000000ULL,
+     ^
+enum.h:5176:5: error: ‘TILE_FLAG_TENTACLE_SW’ was not declared in this scope
+     TILE_FLAG_TENTACLE_SW  = 0x100000000ULL,
+     ^
+enum.h:5177:5: error: ‘TILE_FLAG_TENTACLE_KRAKEN’ was not declared in this scope
+     TILE_FLAG_TENTACLE_KRAKEN = 0x0200000000ULL,
+     ^
+enum.h:5178:5: error: ‘TILE_FLAG_TENTACLE_ELDRITCH’ was not declared in this scope
+     TILE_FLAG_TENTACLE_ELDRITCH = 0x0400000000ULL,
+     ^
+enum.h:5179:5: error: ‘TILE_FLAG_TENTACLE_STARSPAWN’ was not declared in this scope
+     TILE_FLAG_TENTACLE_STARSPAWN = 0x0800000000ULL,
+     ^
+enum.h:5180:5: error: ‘TILE_FLAG_TENTACLE_VINE’ was not declared in this scope
+     TILE_FLAG_TENTACLE_VINE = 0x1000000000ULL,
+     ^
+enum.h:5184:5: error: ‘TILE_FLAG_STARSPAWN_NW’ was not declared in this scope
+     TILE_FLAG_STARSPAWN_NW = 0x02000000000ULL,
+     ^
+enum.h:5185:5: error: ‘TILE_FLAG_STARSPAWN_NE’ was not declared in this scope
+     TILE_FLAG_STARSPAWN_NE = 0x04000000000ULL,
+     ^
+enum.h:5186:5: error: ‘TILE_FLAG_STARSPAWN_SE’ was not declared in this scope
+     TILE_FLAG_STARSPAWN_SE = 0x08000000000ULL,
+     ^
+enum.h:5187:5: error: ‘TILE_FLAG_STARSPAWN_SW’ was not declared in this scope
+     TILE_FLAG_STARSPAWN_SW = 0x10000000000ULL,
+     ^
+enum.h:5194:5: error: ‘TILE_FLAG_LANDING’ was not declared in this scope
+     TILE_FLAG_LANDING     = 0x20000000000ULL,
+     ^
+enum.h:5195:5: error: ‘TILE_FLAG_RAY_MULTI’ was not declared in this scope
+     TILE_FLAG_RAY_MULTI   = 0x40000000000ULL,
+     ^
+enum.h:5198:5: error: ‘TILE_FLAG_MASK’ was not declared in this scope
+     TILE_FLAG_MASK       = 0x0000FFFFULL,
+     ^
+enum.h:5199:1: error: scalar object ‘ENUM_INT64’ requires one element in initializer
+ };
+ ^
+In file included from DreamSheep.h:3:0:
+mon-cast.h:18:27: error: ‘coord_def’ does not name a type
+ bool has_push_space(const coord_def& pos, actor* act,
+                           ^
+mon-cast.h:18:43: error: ‘actor’ has not been declared
+ bool has_push_space(const coord_def& pos, actor* act,
+                                           ^
+mon-cast.h:19:27: error: ‘vector’ does not name a type
+                     const vector<coord_def>* excluded = nullptr);
+                           ^
+mon-cast.h:19:33: error: expected ‘,’ or ‘...’ before ‘<’ token
+                     const vector<coord_def>* excluded = nullptr);
+                                 ^
+mon-cast.h:20:27: error: ‘coord_def’ does not name a type
+ bool get_push_space(const coord_def& pos, coord_def& newpos,
+                           ^
+mon-cast.h:20:43: error: ‘coord_def’ has not been declared
+ bool get_push_space(const coord_def& pos, coord_def& newpos,
+                                           ^
+mon-cast.h:21:21: error: ‘actor’ has not been declared
+                     actor* act, bool ignore_tension = false,
+                     ^
+mon-cast.h:22:27: error: ‘vector’ does not name a type
+                     const vector<coord_def>* excluded = nullptr);
+                           ^
+mon-cast.h:22:33: error: expected ‘,’ or ‘...’ before ‘<’ token
+                     const vector<coord_def>* excluded = nullptr);
+                                 ^
+mon-cast.h:20:6: error: default argument missing for parameter 5 of ‘bool get_push_space(const int&, int&, int*, bool, int)’
+ bool get_push_space(const coord_def& pos, coord_def& newpos,
+      ^
+mon-cast.h:26:62: error: ‘coord_def’ does not name a type
+ bool mons_should_cloud_cone(monster* agent, int power, const coord_def pos);
+                                                              ^
+mon-cast.h:27:51: error: ‘coord_def’ has not been declared
+ bool scattershot_tracer(monster *caster, int pow, coord_def aim);
+                                                   ^
+mon-cast.h:40:16: error: ‘mon_spell_slot_flags’ has not been declared
+                mon_spell_slot_flags slot_flags, bool do_noise = true);
+                ^
+mon-cast.h:42:45: error: ‘mon_spell_slot_flags’ has not been declared
+                      spell_type spell_cast, mon_spell_slot_flags slot_flags);
+                                             ^
+In file included from DreamSheep.h:9:0:
+act-iter.h:12:35: error: expected ‘)’ before ‘c’
+     actor_near_iterator(coord_def c, los_type los = LOS_DEFAULT);
+                                   ^
+act-iter.h:13:31: error: ‘actor’ does not name a type
+     actor_near_iterator(const actor* a, los_type los = LOS_DEFAULT);
+                               ^
+act-iter.h:16:5: error: ‘actor’ does not name a type
+     actor* operator*() const;
+     ^
+act-iter.h:17:5: error: ‘actor’ does not name a type
+     actor* operator->() const;
+     ^
+act-iter.h:22:11: error: ‘coord_def’ does not name a type
+     const coord_def center;
+           ^
+act-iter.h:24:11: error: ‘actor’ does not name a type
+     const actor* viewer;
+           ^
+act-iter.h:27:22: error: ‘actor’ does not name a type
+     bool valid(const actor* a) const;
+                      ^
+act-iter.h:34:37: error: expected ‘)’ before ‘c’
+     monster_near_iterator(coord_def c, los_type los = LOS_DEFAULT);
+                                     ^
+act-iter.h:35:33: error: ‘actor’ does not name a type
+     monster_near_iterator(const actor* a, los_type los = LOS_DEFAULT);
+                                 ^
+act-iter.h:44:11: error: ‘coord_def’ does not name a type
+     const coord_def center;
+           ^
+act-iter.h:46:11: error: ‘actor’ does not name a type
+     const actor* viewer;
+           ^
+In file included from DreamSheep.h:10:0:
+areas.h:23:48: error: ‘coord_def’ does not name a type
+ void areas_actor_moved(const actor* act, const coord_def& oldpos);
+                                                ^
+areas.h:25:29: error: ‘coord_def’ does not name a type
+ void create_sanctuary(const coord_def& center, int time);
+                             ^
+areas.h:29:1: error: ‘coord_def’ does not name a type
+ coord_def find_centre_for (const coord_def& f, area_centre_type at = AREA_NONE);
+ ^
+areas.h:31:21: error: ‘coord_def’ does not name a type
+ bool silenced(const coord_def& p);
+                     ^
+areas.h:34:19: error: ‘coord_def’ does not name a type
+ bool haloed(const coord_def& p);
+                   ^
+areas.h:37:22: error: ‘coord_def’ does not name a type
+ bool liquefied(const coord_def& p, bool check_actual = true);
+                      ^
+areas.h:40:23: error: ‘coord_def’ does not name a type
+ bool orb_haloed(const coord_def& p);
+                       ^
+areas.h:43:24: error: ‘coord_def’ does not name a type
+ bool quad_haloed(const coord_def& p);
+                        ^
+areas.h:46:31: error: ‘coord_def’ does not name a type
+ bool disjunction_haloed(const coord_def& p);
+                               ^
+areas.h:49:20: error: ‘coord_def’ does not name a type
+ bool umbraed(const coord_def& p);
+                    ^
+areas.h:53:19: error: ‘coord_def’ does not name a type
+ bool heated(const coord_def& p);
+                   ^
+In file included from DreamSheep.h:11:0:
+bloodspatter.h:9:29: error: ‘coord_def’ does not name a type
+ void bleed_onto_floor(const coord_def& where, monster_type mon, int damage,
+                             ^
+bloodspatter.h:11:29: error: ‘coord_def’ does not name a type
+                       const coord_def& from = INVALID_COORD,
+                             ^
+bloodspatter.h:11:47: error: ‘INVALID_COORD’ was not declared in this scope
+                       const coord_def& from = INVALID_COORD,
+                                               ^
+bloodspatter.h:13:24: error: ‘coord_def’ does not name a type
+ void blood_spray(const coord_def& where, monster_type mon, int level);
+                        ^
+bloodspatter.h:15:51: error: ‘map_bitmask’ does not name a type
+                                             const map_bitmask *susceptible_area = nullptr);
+                                                   ^
+bloodspatter.h:18:34: error: ‘coord_def’ does not name a type
+ bool maybe_bloodify_square(const coord_def& where);
+                                  ^
+In file included from branch.h:10:0,
+                 from DreamSheep.h:12:
+itemprop-enum.h:285:7: error: ‘vector’ does not name a type
+ const vector<misc_item_type> deck_types =
+       ^
+itemprop-enum.h:298:7: error: ‘vector’ does not name a type
+ const vector<misc_item_type> misc_types =
+       ^
+In file included from actor.h:5:0,
+                 from player.h:15,
+                 from branch.h:11,
+                 from DreamSheep.h:12:
+random-var.h:15:5: error: ‘vector’ does not name a type
+     vector<int> weights;
+     ^
+random-var.h:21:30: error: ‘vector’ has not been declared
+     random_var(int s, int e, vector<int> ws);
+                              ^
+random-var.h:21:36: error: expected ‘,’ or ‘...’ before ‘<’ token
+     random_var(int s, int e, vector<int> ws);
+                                    ^
+In file included from feature.h:4:0,
+                 from options.h:6,
+                 from beam.h:9,
+                 from ouch.h:11,
+                 from actor.h:6,
+                 from player.h:15,
+                 from branch.h:11,
+                 from DreamSheep.h:12:
+show.h:49:5: error: ‘colour_t’ does not name a type
+     colour_t colour;
+     ^
+show.h:53:21: error: ‘item_def’ does not name a type
+     show_type(const item_def &item);
+                     ^
+In file included from mon-cast.h:9:0,
+                 from DreamSheep.h:3:
+enum.h:149:18: error: expected constructor, destructor, or type conversion before ‘(’ token
+     COMPILE_CHECK(is_enum<flagT>::value)
+                  ^
+enum.h:155:24: note: in definition of macro ‘EXPANDMACRO’
+ #define EXPANDMACRO(x) x
+                        ^
+enum.h:182:17: note: in expansion of macro ‘DEF_BITFIELD_OPERATORS’
+     EXPANDMACRO(DEF_BITFIELD_OPERATORS(fieldT, __VA_ARGS__, ))
+                 ^
+show.h:82:1: note: in expansion of macro ‘DEF_BITFIELD’
+ DEF_BITFIELD(layers_type, layer_type, 5);
+ ^
+In file included from feature.h:4:0,
+                 from options.h:6,
+                 from beam.h:9,
+                 from ouch.h:11,
+                 from actor.h:6,
+                 from player.h:15,
+                 from branch.h:11,
+                 from DreamSheep.h:12:
+show.h:87:27: error: ‘coord_def’ does not name a type
+ void update_item_at(const coord_def &gp, bool detected = false, bool wizard = false);
+                           ^
+show.h:88:27: error: ‘coord_def’ does not name a type
+ void show_update_at(const coord_def &gp, layers_type layers = LAYERS_ALL);
+                           ^
+In file included from options.h:6:0,
+                 from beam.h:9,
+                 from ouch.h:11,
+                 from actor.h:6,
+                 from player.h:15,
+                 from branch.h:11,
+                 from DreamSheep.h:12:
+feature.h:24:5: error: ‘colour_t’ does not name a type
+     colour_t             dcolour;          // normal in LoS colour
+     ^
+feature.h:25:5: error: ‘colour_t’ does not name a type
+     colour_t             map_dcolour;      // colour when out of LoS on display
+     ^
+feature.h:26:5: error: ‘colour_t’ does not name a type
+     colour_t             seen_dcolour;     // map_colour when env.map_knowledge().seen()
+     ^
+feature.h:27:5: error: ‘colour_t’ does not name a type
+     colour_t             em_dcolour;       // Emphasised colour when in LoS.
+     ^
+feature.h:28:5: error: ‘colour_t’ does not name a type
+     colour_t             seen_em_dcolour;  // Emphasised colour when out of LoS
+     ^
+feature.h:37:9: error: ‘colour_t’ has not been declared
+         colour_t dcolour_ = BLACK, colour_t map_dcolour_ = DARKGREY,
+         ^
+feature.h:37:36: error: ‘colour_t’ has not been declared
+         colour_t dcolour_ = BLACK, colour_t map_dcolour_ = DARKGREY,
+                                    ^
+feature.h:38:9: error: ‘colour_t’ has not been declared
+         colour_t seen_dcolour_ = BLACK, colour_t em_dcolour_ = BLACK,
+         ^
+feature.h:38:41: error: ‘colour_t’ has not been declared
+         colour_t seen_dcolour_ = BLACK, colour_t em_dcolour_ = BLACK,
+                                         ^
+feature.h:39:9: error: ‘colour_t’ has not been declared
+         colour_t seen_em_dcolour_ = BLACK, unsigned flags_ = FFT_NONE,
+         ^
+feature.h:50:5: error: ‘colour_t’ does not name a type
+     colour_t colour() const;
+     ^
+feature.h:51:5: error: ‘colour_t’ does not name a type
+     colour_t map_colour() const;
+     ^
+feature.h:52:5: error: ‘colour_t’ does not name a type
+     colour_t seen_colour() const;
+     ^
+feature.h:53:5: error: ‘colour_t’ does not name a type
+     colour_t em_colour() const;
+     ^
+feature.h:54:5: error: ‘colour_t’ does not name a type
+     colour_t seen_em_colour() const;
+     ^
+feature.h:37:29: error: ‘BLACK’ was not declared in this scope
+         colour_t dcolour_ = BLACK, colour_t map_dcolour_ = DARKGREY,
+                             ^
+feature.h:37:60: error: ‘DARKGREY’ was not declared in this scope
+         colour_t dcolour_ = BLACK, colour_t map_dcolour_ = DARKGREY,
+                                                            ^
+feature.h:38:34: error: ‘BLACK’ was not declared in this scope
+         colour_t seen_dcolour_ = BLACK, colour_t em_dcolour_ = BLACK,
+                                  ^
+feature.h:38:64: error: ‘BLACK’ was not declared in this scope
+         colour_t seen_dcolour_ = BLACK, colour_t em_dcolour_ = BLACK,
+                                                                ^
+feature.h:39:37: error: ‘BLACK’ was not declared in this scope
+         colour_t seen_em_dcolour_ = BLACK, unsigned flags_ = FFT_NONE,
+                                     ^
+feature.h: In constructor ‘feature_def::feature_def(dungeon_feature_type, const char*, const char*, dungeon_char_type, dungeon_char_type, int, int, int, int, int, unsigned int, map_feature)’:
+feature.h:42:36: error: class ‘feature_def’ does not have any field named ‘dcolour’
+         magic_dchar{magic_dchar_}, dcolour{dcolour_}, map_dcolour{map_dcolour_},
+                                    ^
+feature.h:42:55: error: class ‘feature_def’ does not have any field named ‘map_dcolour’
+         magic_dchar{magic_dchar_}, dcolour{dcolour_}, map_dcolour{map_dcolour_},
+                                                       ^
+feature.h:43:9: error: class ‘feature_def’ does not have any field named ‘seen_dcolour’
+         seen_dcolour{seen_dcolour_}, em_dcolour{em_dcolour_},
+         ^
+feature.h:43:38: error: class ‘feature_def’ does not have any field named ‘em_dcolour’
+         seen_dcolour{seen_dcolour_}, em_dcolour{em_dcolour_},
+                                      ^
+feature.h:44:9: error: class ‘feature_def’ does not have any field named ‘seen_em_dcolour’
+         seen_em_dcolour{seen_em_dcolour_}, flags{flags_}, minimap{minimap_}
+         ^
+In file included from options.h:7:0,
+                 from beam.h:9,
+                 from ouch.h:11,
+                 from actor.h:6,
+                 from player.h:15,
+                 from branch.h:11,
+                 from DreamSheep.h:12:
+newgame_def.h: At global scope:
+newgame_def.h:11:5: error: ‘string’ does not name a type
+     string name;
+     ^
+newgame_def.h:13:5: error: ‘string’ does not name a type
+     string filename;
+     ^
+newgame_def.h:17:5: error: ‘string’ does not name a type
+     string map;
+     ^
+newgame_def.h:19:5: error: ‘string’ does not name a type
+     string arena_teams;
+     ^
+newgame_def.h:21:5: error: ‘vector’ does not name a type
+     vector<string> allowed_combos;
+     ^
+newgame_def.h:22:5: error: ‘vector’ does not name a type
+     vector<species_type> allowed_species;
+     ^
+newgame_def.h:23:5: error: ‘vector’ does not name a type
+     vector<job_type> allowed_jobs;
+     ^
+newgame_def.h:24:5: error: ‘vector’ does not name a type
+     vector<weapon_type> allowed_weapons;
+     ^
+In file included from options.h:8:0,
+                 from beam.h:9,
+                 from ouch.h:11,
+                 from actor.h:6,
+                 from player.h:15,
+                 from branch.h:11,
+                 from DreamSheep.h:12:
+pattern.h:7:42: error: ‘string’ does not name a type
+     static pattern_match succeeded(const string &s, int start = 0, int end = 0)
+                                          ^
+pattern.h:12:39: error: ‘string’ does not name a type
+     static pattern_match failed(const string &s = string())
+                                       ^
+pattern.h:22:5: error: ‘string’ does not name a type
+     string annotate_string(const string &color) const;
+     ^
+pattern.h:24:11: error: ‘string’ does not name a type
+     const string &matched_text() const
+           ^
+pattern.h:31:40: error: ‘string’ does not name a type
+     pattern_match(bool _matched, const string &_text, int _start, int _end)
+                                        ^
+pattern.h:37:5: error: ‘string’ does not name a type
+     string text;
+     ^
+pattern.h:12:58: error: ‘string’ was not declared in this scope
+     static pattern_match failed(const string &s = string())
+                                                          ^
+pattern.h:12:58: note: suggested alternative:
+In file included from /usr/include/c++/4.9/iosfwd:39:0,
+                 from /usr/include/c++/4.9/ios:38,
+                 from /usr/include/c++/4.9/ostream:38,
+                 from /usr/include/c++/4.9/iterator:64,
+                 from enum.h:9,
+                 from mon-cast.h:9,
+                 from DreamSheep.h:3:
+/usr/include/c++/4.9/bits/stringfwd.h:62:33: note:   ‘std::string’
+   typedef basic_string<char>    string;   
+                                 ^
+In file included from options.h:8:0,
+                 from beam.h:9,
+                 from ouch.h:11,
+                 from actor.h:6,
+                 from player.h:15,
+                 from branch.h:11,
+                 from DreamSheep.h:12:
+pattern.h: In constructor ‘pattern_match::pattern_match(bool, const int&, int, int)’:
+pattern.h:32:30: error: class ‘pattern_match’ does not have any field named ‘text’
+         : matched(_matched), text(_text), start(_start), end(_end)
+                              ^
+pattern.h: At global scope:
+pattern.h:48:32: error: ‘string’ does not name a type
+     virtual bool matches(const string &s) const = 0;
+                                ^
+pattern.h:49:48: error: ‘string’ does not name a type
+     virtual pattern_match match_location(const string &s) const = 0;
+                                                ^
+pattern.h:50:19: error: ‘string’ does not name a type
+     virtual const string &tostring() const = 0;
+                   ^
+pattern.h:56:24: error: ‘string’ does not name a type
+     text_pattern(const string &s, bool icase = false)
+                        ^
+pattern.h:79:42: error: ‘string’ does not name a type
+     const text_pattern &operator= (const string &spattern);
+                                          ^
+pattern.h:98:24: error: ‘string’ does not name a type
+     bool matches(const string &s) const override
+                        ^
+pattern.h:110:40: error: ‘string’ does not name a type
+     pattern_match match_location(const string &s) const override
+                                        ^
+pattern.h:115:11: error: ‘string’ does not name a type
+     const string &tostring() const override
+           ^
+pattern.h:121:5: error: ‘string’ does not name a type
+     string pattern;
+     ^
+pattern.h: In constructor ‘text_pattern::text_pattern(const int&, bool)’:
+pattern.h:57:11: error: class ‘text_pattern’ does not have any field named ‘pattern’
+         : pattern(s), compiled_pattern(nullptr),
+           ^
+pattern.h: In constructor ‘text_pattern::text_pattern()’:
+pattern.h:63:11: error: class ‘text_pattern’ does not have any field named ‘pattern’
+         : pattern(), compiled_pattern(nullptr),
+           ^
+pattern.h: In copy constructor ‘text_pattern::text_pattern(const text_pattern&)’:
+pattern.h:70:11: error: class ‘text_pattern’ does not have any field named ‘pattern’
+           pattern(tp.pattern),
+           ^
+pattern.h:70:22: error: ‘const class text_pattern’ has no member named ‘pattern’
+           pattern(tp.pattern),
+                      ^
+pattern.h: In member function ‘bool text_pattern::empty() const’:
+pattern.h:83:34: error: ‘pattern’ was not declared in this scope
+     bool empty() const { return !pattern.length(); }
+                                  ^
+pattern.h: In member function ‘bool text_pattern::matches(const char*) const’:
+pattern.h:95:35: error: ‘strlen’ was not declared in this scope
+         return matches(s, strlen(s));
+                                   ^
+pattern.h: In member function ‘virtual bool text_pattern::matches(const int&) const’:
+pattern.h:100:26: error: request for member ‘c_str’ in ‘s’, which is of non-class type ‘const int’
+         return matches(s.c_str(), s.length());
+                          ^
+pattern.h:100:37: error: request for member ‘length’ in ‘s’, which is of non-class type ‘const int’
+         return matches(s.c_str(), s.length());
+                                     ^
+pattern.h: In member function ‘pattern_match text_pattern::match_location(const char*) const’:
+pattern.h:107:42: error: ‘strlen’ was not declared in this scope
+         return match_location(s, strlen(s));
+                                          ^
+pattern.h: In member function ‘virtual pattern_match text_pattern::match_location(const int&) const’:
+pattern.h:112:33: error: request for member ‘c_str’ in ‘s’, which is of non-class type ‘const int’
+         return match_location(s.c_str(), s.length());
+                                 ^
+pattern.h:112:44: error: request for member ‘length’ in ‘s’, which is of non-class type ‘const int’
+         return match_location(s.c_str(), s.length());
+                                            ^
+pattern.h: At global scope:
+pattern.h:130:29: error: ‘string’ does not name a type
+     plaintext_pattern(const string &s, bool icase = false)
+                             ^
+pattern.h:140:47: error: ‘string’ does not name a type
+     const plaintext_pattern &operator= (const string &spattern);
+                                               ^
+pattern.h:146:24: error: ‘string’ does not name a type
+     bool matches(const string &s) const override;
+                        ^
+pattern.h:147:40: error: ‘string’ does not name a type
+     pattern_match match_location(const string &s) const override;
+                                        ^
+pattern.h:149:11: error: ‘string’ does not name a type
+     const string &tostring() const override
+           ^
+pattern.h:155:5: error: ‘string’ does not name a type
+     string pattern;
+     ^
+pattern.h: In constructor ‘plaintext_pattern::plaintext_pattern(const int&, bool)’:
+pattern.h:131:11: error: class ‘plaintext_pattern’ does not have any field named ‘pattern’
+         : pattern(s), ignore_case(icase)
+           ^
+pattern.h: In constructor ‘plaintext_pattern::plaintext_pattern()’:
+pattern.h:136:11: error: class ‘plaintext_pattern’ does not have any field named ‘pattern’
+         : pattern(), ignore_case(false)
+           ^
+pattern.h: In member function ‘bool plaintext_pattern::empty() const’:
+pattern.h:143:34: error: ‘pattern’ was not declared in this scope
+     bool empty() const { return !pattern.length(); }
+                                  ^
+In file included from beam.h:9:0,
+                 from ouch.h:11,
+                 from actor.h:6,
+                 from player.h:15,
+                 from branch.h:11,
+                 from DreamSheep.h:12:
+options.h: At global scope:
+options.h:24:34: error: ‘string’ does not name a type
+     message_filter(int ch, const string &s)
+                                  ^
+options.h:29:26: error: ‘string’ does not name a type
+     message_filter(const string &s) : channel(-1), pattern(s, true) { }
+                          ^
+options.h:36:36: error: ‘string’ does not name a type
+     bool is_filtered(int ch, const string &s) const
+                                    ^
+options.h:48:5: error: ‘string’ does not name a type
+     string       soundfile;
+     ^
+options.h: In member function ‘bool sound_mapping::operator==(const sound_mapping&) const’:
+options.h:51:40: error: ‘soundfile’ was not declared in this scope
+         return pattern == o.pattern && soundfile == o.soundfile;
+                                        ^
+options.h:51:55: error: ‘const struct sound_mapping’ has no member named ‘soundfile’
+         return pattern == o.pattern && soundfile == o.soundfile;
+                                                       ^
+options.h: At global scope:
+options.h:57:5: error: ‘string’ does not name a type
+     string tag;
+     ^
+options.h:59:5: error: ‘colour_t’ does not name a type
+     colour_t colour;
+     ^
+options.h: In member function ‘bool colour_mapping::operator==(const colour_mapping&) const’:
+options.h:62:16: error: ‘tag’ was not declared in this scope
+         return tag == o.tag && pattern == o.pattern && colour == o.colour;
+                ^
+options.h:62:25: error: ‘const struct colour_mapping’ has no member named ‘tag’
+         return tag == o.tag && pattern == o.pattern && colour == o.colour;
+                         ^
+options.h:62:56: error: ‘colour’ was not declared in this scope
+         return tag == o.tag && pattern == o.pattern && colour == o.colour;
+                                                        ^
+options.h:62:68: error: ‘const struct colour_mapping’ has no member named ‘colour’
+         return tag == o.tag && pattern == o.pattern && colour == o.colour;
+                                                                    ^
+options.h: At global scope:
+options.h:69:5: error: ‘msg_colour_type’ does not name a type
+     msg_colour_type colour;
+     ^
+options.h: In member function ‘bool message_colour_mapping::operator==(const message_colour_mapping&) const’:
+options.h:72:40: error: ‘colour’ was not declared in this scope
+         return message == o.message && colour == o.colour;
+                                        ^
+options.h:72:52: error: ‘const struct message_colour_mapping’ has no member named ‘colour’
+         return message == o.message && colour == o.colour;
+                                                    ^
+In file included from mon-cast.h:9:0,
+                 from DreamSheep.h:3:
+options.h: At global scope:
+enum.h:149:18: error: expected constructor, destructor, or type conversion before ‘(’ token
+     COMPILE_CHECK(is_enum<flagT>::value)
+                  ^
+enum.h:155:24: note: in definition of macro ‘EXPANDMACRO’
+ #define EXPANDMACRO(x) x
+                        ^
+enum.h:182:17: note: in expansion of macro ‘DEF_BITFIELD_OPERATORS’
+     EXPANDMACRO(DEF_BITFIELD_OPERATORS(fieldT, __VA_ARGS__, ))
+                 ^
+options.h:105:1: note: in expansion of macro ‘DEF_BITFIELD’
+ DEF_BITFIELD(use_animations_type, use_animation_type);
+ ^
+In file included from beam.h:9:0,
+                 from ouch.h:11,
+                 from actor.h:6,
+                 from player.h:15,
+                 from branch.h:11,
+                 from DreamSheep.h:12:
+options.h:115:33: error: ‘string’ does not name a type
+     void read_option_line(const string &s, bool runscripts = false);
+                                 ^
+options.h:119:24: error: ‘string’ does not name a type
+     void include(const string &file, bool resolve, bool runscript);
+                        ^
+options.h:120:23: error: ‘PRINTF’ has not been declared
+     void report_error(PRINTF(1, ));
+                       ^
+options.h:120:30: error: expected ‘)’ before numeric constant
+     void report_error(PRINTF(1, ));
+                              ^
+options.h:120:30: error: expected ‘)’ before numeric constant
+options.h:120:29: error: expected ‘;’ at end of member declaration
+     void report_error(PRINTF(1, ));
+                             ^
+options.h:120:30: error: expected unqualified-id before numeric constant
+     void report_error(PRINTF(1, ));
+                              ^
+options.h:122:5: error: ‘string’ does not name a type
+     string resolve_include(const string &file, const char *type = "");
+     ^
+options.h:124:29: error: ‘string’ does not name a type
+     bool was_included(const string &file) const;
+                             ^
+options.h:126:12: error: ‘string’ does not name a type
+     static string resolve_include(string including_file, string included_file,
+            ^
+options.h:134:5: error: ‘string’ does not name a type
+     string      filename;     // The name of the file containing options.
+     ^
+options.h:135:5: error: ‘string’ does not name a type
+     string      basefilename; // Base (pathless) file name
+     ^
+options.h:139:5: error: ‘map’ does not name a type
+     map<dungeon_feature_type, feature_def> feature_colour_overrides;
+     ^
+options.h:140:5: error: ‘map’ does not name a type
+     map<dungeon_feature_type, FixedVector<char32_t, 2> > feature_symbol_overrides;
+     ^
+options.h:141:5: error: ‘map’ does not name a type
+     map<monster_type, cglyph_t> mon_glyph_overrides;
+     ^
+options.h:143:13: error: ‘pair’ does not name a type
+     typedef pair<string, cglyph_t> item_glyph_override_type;
+             ^
+options.h:144:5: error: ‘vector’ does not name a type
+     vector<item_glyph_override_type > item_glyph_overrides;
+     ^
+options.h:145:5: error: ‘map’ does not name a type
+     map<string, cglyph_t> item_glyph_cache;
+     ^
+options.h:147:5: error: ‘string’ does not name a type
+     string      save_dir;       // Directory where saves and bones go.
+     ^
+options.h:148:5: error: ‘string’ does not name a type
+     string      macro_dir;      // Directory containing macro.txt
+     ^
+options.h:149:5: error: ‘string’ does not name a type
+     string      morgue_dir;     // Directory where character dumps and morgue
+     ^
+options.h:151:5: error: ‘string’ does not name a type
+     string      shared_dir;     // Directory where the logfile, scores and bones
+     ^
+options.h:154:5: error: ‘vector’ does not name a type
+     vector<string> additional_macro_files;
+     ^
+options.h:204:5: error: ‘FixedBitVector’ does not name a type
+     FixedBitVector<NUM_OBJECT_CLASSES> autopickups; // items to autopickup
+     ^
+options.h:221:5: error: ‘string’ does not name a type
+     string      user_note_prefix; // Prefix for user notes
+     ^
+options.h:233:5: error: ‘msg_colour_type’ does not name a type
+     msg_colour_type channels[NUM_MESSAGE_CHANNELS];  // msg channel colouring
+     ^
+options.h:252:5: error: ‘vector’ does not name a type
+     vector<unsigned> fire_order;  // missile search order for 'f' command
+     ^
+options.h:257:5: error: ‘FixedVector’ does not name a type
+     FixedVector<char32_t, NUM_DCHAR_TYPES> char_table;
+     ^
+options.h:261:5: error: ‘vector’ does not name a type
+     vector<string> pizzas;
+     ^
+options.h:267:5: error: ‘vector’ does not name a type
+     vector<string> terp_files; // Lua files to load for luaterp
+     ^
+options.h:274:5: error: ‘vector’ does not name a type
+     vector<pair<int, int> > hp_colour;
+     ^
+options.h:275:5: error: ‘vector’ does not name a type
+     vector<pair<int, int> > mp_colour;
+     ^
+options.h:276:5: error: ‘vector’ does not name a type
+     vector<pair<int, int> > stat_colour;
+     ^
+options.h:277:5: error: ‘vector’ does not name a type
+     vector<int> enemy_hp_colour;
+     ^
+options.h:279:5: error: ‘string’ does not name a type
+     string map_file_name;   // name of mapping file to use
+     ^
+options.h:280:5: error: ‘vector’ does not name a type
+     vector<pair<text_pattern, bool> > force_autopickup;
+     ^
+options.h:281:5: error: ‘vector’ does not name a type
+     vector<text_pattern> note_monsters;  // Interesting monsters
+     ^
+options.h:282:5: error: ‘vector’ does not name a type
+     vector<text_pattern> note_messages;  // Interesting messages
+     ^
+options.h:283:5: error: ‘vector’ does not name a type
+     vector<pair<text_pattern, string> > autoinscriptions;
+     ^
+options.h:284:5: error: ‘vector’ does not name a type
+     vector<text_pattern> note_items;     // Objects to note
+     ^
+options.h:286:5: error: ‘FixedBitVector’ does not name a type
+     FixedBitVector<MAX_SKILL_LEVEL + 1> note_skill_levels;
+     ^
+options.h:287:5: error: ‘vector’ does not name a type
+     vector<pair<text_pattern, string>> auto_spell_letters;
+     ^
+options.h:288:5: error: ‘vector’ does not name a type
+     vector<pair<text_pattern, string>> auto_item_letters;
+     ^
+options.h:289:5: error: ‘vector’ does not name a type
+     vector<pair<text_pattern, string>> auto_ability_letters;
+     ^
+options.h:304:5: error: ‘vector’ does not name a type
+     vector<message_filter> force_more_message;
+     ^
+options.h:305:5: error: ‘vector’ does not name a type
+     vector<message_filter> flash_screen_message;
+     ^
+options.h:306:5: error: ‘vector’ does not name a type
+     vector<text_pattern> confirm_action;
+     ^
+options.h:313:5: error: ‘vector’ does not name a type
+     vector<text_pattern> auto_exclude; // Automatically set an exclusion
+     ^
+options.h:338:5: error: ‘vector’ does not name a type
+     vector<text_pattern> explore_stop_pickup_ignore;
+     ^
+options.h:355:5: error: ‘vector’ does not name a type
+     vector<sound_mapping> sound_mappings;
+     ^
+options.h:356:5: error: ‘vector’ does not name a type
+     vector<colour_mapping> menu_colour_mappings;
+     ^
+options.h:357:5: error: ‘vector’ does not name a type
+     vector<message_colour_mapping> message_colour_mappings;
+     ^
+options.h:359:5: error: ‘vector’ does not name a type
+     vector<menu_sort_condition> sort_menus;
+     ^
+options.h:370:5: error: ‘vector’ does not name a type
+     vector<string> dump_order;
+     ^
+options.h:387:5: error: ‘vector’ does not name a type
+     vector<text_pattern> drop_filter;
+     ^
+options.h:389:5: error: ‘map’ does not name a type
+     map<string, FixedBitVector<NUM_AINTERRUPTS>> activity_interrupts;
+     ^
+options.h:422:5: error: ‘vector’ does not name a type
+     vector<flang_entry> fake_langs;       // The fake language(s) in use.
+     ^
+options.h:529:13: error: ‘map’ does not name a type
+     typedef map<string, string> opt_map;
+             ^
+options.h:530:5: error: ‘opt_map’ does not name a type
+     opt_map     named_options;          // All options not caught above are
+     ^
+options.h:536:13: error: ‘map’ does not name a type
+     typedef map<string, string> string_map;
+             ^
+options.h:537:5: error: ‘string_map’ does not name a type
+     string_map     aliases;
+     ^
+options.h:538:5: error: ‘string_map’ does not name a type
+     string_map     variables;
+     ^
+options.h:539:5: error: ‘set’ does not name a type
+     set<string>    constants; // Variables that can't be changed
+     ^
+options.h:540:5: error: ‘set’ does not name a type
+     set<string>    included;  // Files we've included already.
+     ^
+options.h:547:5: error: ‘string’ does not name a type
+     string unalias(const string &key) const;
+     ^
+options.h:548:5: error: ‘string’ does not name a type
+     string expand_vars(const string &field) const;
+     ^
+options.h:549:26: error: ‘string’ does not name a type
+     void add_alias(const string &alias, const string &name);
+                          ^
+options.h:549:47: error: ‘string’ does not name a type
+     void add_alias(const string &alias, const string &name);
+                                               ^
+options.h:554:37: error: ‘string’ does not name a type
+     void add_feature_override(const string &, bool prepend);
+                                     ^
+options.h:555:40: error: ‘string’ does not name a type
+     void remove_feature_override(const string &, bool prepend);
+                                        ^
+options.h:557:44: error: ‘string’ does not name a type
+     void add_message_colour_mappings(const string &, bool, bool);
+                                            ^
+options.h:558:43: error: ‘string’ does not name a type
+     void add_message_colour_mapping(const string &, bool, bool);
+                                           ^
+options.h:559:47: error: ‘string’ does not name a type
+     message_filter parse_message_filter(const string &s);
+                                               ^
+options.h:562:33: error: ‘FixedBitVector’ has not been declared
+     void set_activity_interrupt(FixedBitVector<NUM_AINTERRUPTS> &eints,
+                                 ^
+options.h:562:47: error: expected ‘,’ or ‘...’ before ‘<’ token
+     void set_activity_interrupt(FixedBitVector<NUM_AINTERRUPTS> &eints,
+                                               ^
+options.h:564:39: error: ‘string’ does not name a type
+     void set_activity_interrupt(const string &activity_name,
+                                       ^
+options.h:565:39: error: ‘string’ does not name a type
+                                 const string &interrupt_names,
+                                       ^
+options.h:568:31: error: ‘string’ does not name a type
+     void set_fire_order(const string &full, bool append, bool prepend);
+                               ^
+options.h:569:36: error: ‘string’ does not name a type
+     void add_fire_order_slot(const string &s, bool prepend);
+                                    ^
+options.h:570:24: error: ‘string’ has not been declared
+     void set_menu_sort(string field);
+                        ^
+options.h:571:39: error: ‘string’ does not name a type
+     void str_to_enemy_hp_colour(const string &, bool);
+                                       ^
+options.h:572:32: error: ‘string’ does not name a type
+     void new_dump_fields(const string &text, bool add = true,
+                                ^
+options.h:574:28: error: ‘string’ does not name a type
+     void do_kill_map(const string &from, const string &to);
+                            ^
+options.h:574:48: error: ‘string’ does not name a type
+     void do_kill_map(const string &from, const string &to);
+                                                ^
+options.h:575:45: error: ‘string’ does not name a type
+     int  read_explore_stop_conditions(const string &) const;
+                                             ^
+options.h:576:51: error: ‘string’ does not name a type
+     use_animations_type read_use_animations(const string &) const;
+                                                   ^
+options.h:578:28: error: ‘string’ does not name a type
+     void split_parse(const string &s, const string &separator,
+                            ^
+options.h:578:45: error: ‘string’ does not name a type
+     void split_parse(const string &s, const string &separator,
+                                             ^
+options.h:579:54: error: ‘string’ does not name a type
+                      void (game_options::*add)(const string &, bool),
+                                                      ^
+options.h:581:39: error: ‘string’ does not name a type
+     void add_mon_glyph_override(const string &, bool prepend);
+                                       ^
+options.h:582:42: error: ‘string’ does not name a type
+     void remove_mon_glyph_override(const string &, bool prepend);
+                                          ^
+options.h:583:5: error: ‘cglyph_t’ does not name a type
+     cglyph_t parse_mon_glyph(const string &s) const;
+     ^
+options.h:584:40: error: ‘string’ does not name a type
+     void add_item_glyph_override(const string &, bool prepend);
+                                        ^
+options.h:585:43: error: ‘string’ does not name a type
+     void remove_item_glyph_override(const string &, bool prepend);
+                                           ^
+options.h:586:36: error: ‘string’ does not name a type
+     void set_option_fragment(const string &s, bool prepend);
+                                    ^
+options.h:588:31: error: ‘string’ does not name a type
+     void set_fake_langs(const string &input);
+                               ^
+options.h:589:32: error: ‘string’ does not name a type
+     void set_player_tile(const string &s);
+                                ^
+options.h:590:33: error: ‘string’ does not name a type
+     void set_tile_offsets(const string &s, bool set_shield);
+                                 ^
+options.h:592:18: error: ‘string’ does not name a type
+     static const string interrupt_prefix;
+                  ^
+options.h:594:5: error: ‘vector’ does not name a type
+     vector<GameOption*> option_behaviour;
+     ^
+options.h:595:5: error: ‘map’ does not name a type
+     map<string, GameOption*> options_by_name;
+     ^
+options.h:596:11: error: ‘vector’ does not name a type
+     const vector<GameOption*> build_options_list();
+           ^
+options.h:597:5: error: ‘map’ does not name a type
+     map<string, GameOption*> build_options_map(const vector<GameOption*> &opts);
+     ^
+options.h: In member function ‘bool game_options::has_fake_lang(flang_t)’:
+options.h:425:29: error: ‘fake_langs’ was not declared in this scope
+         return any_of(begin(fake_langs), end(fake_langs),
+                             ^
+options.h:425:39: error: ‘begin’ was not declared in this scope
+         return any_of(begin(fake_langs), end(fake_langs),
+                                       ^
+options.h:425:39: note: suggested alternative:
+In file included from /usr/include/c++/4.9/bits/basic_string.h:42:0,
+                 from /usr/include/c++/4.9/string:52,
+                 from /usr/include/c++/4.9/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.9/bits/ios_base.h:41,
+                 from /usr/include/c++/4.9/ios:42,
+                 from /usr/include/c++/4.9/ostream:38,
+                 from /usr/include/c++/4.9/iterator:64,
+                 from enum.h:9,
+                 from mon-cast.h:9,
+                 from DreamSheep.h:3:
+/usr/include/c++/4.9/initializer_list:89:5: note:   ‘std::begin’
+     begin(initializer_list<_Tp> __ils) noexcept
+     ^
+In file included from beam.h:9:0,
+                 from ouch.h:11,
+                 from actor.h:6,
+                 from player.h:15,
+                 from branch.h:11,
+                 from DreamSheep.h:12:
+options.h:425:56: error: ‘end’ was not declared in this scope
+         return any_of(begin(fake_langs), end(fake_langs),
+                                                        ^
+options.h:425:56: note: suggested alternative:
+In file included from /usr/include/c++/4.9/bits/basic_string.h:42:0,
+                 from /usr/include/c++/4.9/string:52,
+                 from /usr/include/c++/4.9/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.9/bits/ios_base.h:41,
+                 from /usr/include/c++/4.9/ios:42,
+                 from /usr/include/c++/4.9/ostream:38,
+                 from /usr/include/c++/4.9/iterator:64,
+                 from enum.h:9,
+                 from mon-cast.h:9,
+                 from DreamSheep.h:3:
+/usr/include/c++/4.9/initializer_list:99:5: note:   ‘std::end’
+     end(initializer_list<_Tp> __ils) noexcept
+     ^
+In file included from beam.h:9:0,
+                 from ouch.h:11,
+                 from actor.h:6,
+                 from player.h:15,
+                 from branch.h:11,
+                 from DreamSheep.h:12:
+options.h:427:53: error: ‘any_of’ was not declared in this scope
+                       { return f.lang_id == flang; });
+                                                     ^
+options.h:427:53: note: suggested alternative:
+In file included from /usr/include/c++/4.9/algorithm:62:0,
+                 from DreamSheep.h:5:
+/usr/include/c++/4.9/bits/stl_algo.h:543:5: note:   ‘std::any_of’
+     any_of(_InputIterator __first, _InputIterator __last, _Predicate __pred)
+     ^
+In file included from beam.h:9:0,
+                 from ouch.h:11,
+                 from actor.h:6,
+                 from player.h:15,
+                 from branch.h:11,
+                 from DreamSheep.h:12:
+options.h: In function ‘short int macro_colour(short int)’:
+options.h:610:18: error: ‘NUM_TERM_COLOURS’ was not declared in this scope
+     ASSERT(col < NUM_TERM_COLOURS);
+                  ^
+options.h:610:34: error: ‘ASSERT’ was not declared in this scope
+     ASSERT(col < NUM_TERM_COLOURS);
+                                  ^
+In file included from random.h:9:0,
+                 from beam.h:10,
+                 from ouch.h:11,
+                 from actor.h:6,
+                 from player.h:15,
+                 from branch.h:11,
+                 from DreamSheep.h:12:
+hash.h: At global scope:
+hash.h:19:44: error: expected initializer before ‘PURE’
+ uint32_t hash32(const void *data, int len) PURE;
+                                            ^
+In file included from beam.h:10:0,
+                 from ouch.h:11,
+                 from actor.h:6,
+                 from player.h:15,
+                 from branch.h:11,
+                 from DreamSheep.h:12:
+random.h:120:34: error: ‘FixedVector’ does not name a type
+ int random_choose_weighted(const FixedVector<T, SIZE>& choices)
+                                  ^
+random.h:120:45: error: expected ‘,’ or ‘...’ before ‘<’ token
+ int random_choose_weighted(const FixedVector<T, SIZE>& choices)
+                                             ^
+random.h: In function ‘int random_choose_weighted(int)’:
+random.h:123:24: error: ‘choices’ was not declared in this scope
+     for (auto weight : choices)
+                        ^
+random.h:131:13: error: ‘choices’ was not declared in this scope
+         if (choices[i] <= 0)
+             ^
+random.h:134:16: error: ‘choices’ was not declared in this scope
+         sum += choices[i];
+                ^
+random.h: At global scope:
+random.h:219:5: error: ‘vector’ does not name a type
+     vector<uint32_t> bits;
+     ^
+random.h:220:5: error: ‘map’ does not name a type
+     map<int, defer_rand> children;
+     ^
+random.h: In function ‘int choose_random_weighted(Iterator, Iterator)’:
+random.h:248:23: error: there are no arguments to ‘ASSERT’ that depend on a template parameter, so a declaration of ‘ASSERT’ must be available [-fpermissive]
+     ASSERT(result >= 0);
+                       ^
+random.h:248:23: note: (if you use ‘-fpermissive’, G++ will accept your code, but allowing the use of an undeclared name is deprecated)
+In file included from fixedarray.h:11:0,
+                 from ray.h:9,
+                 from beam.h:11,
+                 from ouch.h:11,
+                 from actor.h:6,
+                 from player.h:15,
+                 from branch.h:11,
+                 from DreamSheep.h:12:
+fixedvector.h: In member function ‘void FixedVector<TYPE, SIZE>::init(const TYPE&)’:
+fixedvector.h:112:10: error: ‘::begin’ has not been declared
+     fill(::begin(mData), ::end(mData), def);
+          ^
+fixedvector.h:112:10: note: suggested alternative:
+In file included from /usr/include/c++/4.9/bits/basic_string.h:42:0,
+                 from /usr/include/c++/4.9/string:52,
+                 from /usr/include/c++/4.9/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.9/bits/ios_base.h:41,
+                 from /usr/include/c++/4.9/ios:42,
+                 from /usr/include/c++/4.9/ostream:38,
+                 from /usr/include/c++/4.9/iterator:64,
+                 from enum.h:9,
+                 from mon-cast.h:9,
+                 from DreamSheep.h:3:
+/usr/include/c++/4.9/initializer_list:89:5: note:   ‘std::begin’
+     begin(initializer_list<_Tp> __ils) noexcept
+     ^
+In file included from fixedarray.h:11:0,
+                 from ray.h:9,
+                 from beam.h:11,
+                 from ouch.h:11,
+                 from actor.h:6,
+                 from player.h:15,
+                 from branch.h:11,
+                 from DreamSheep.h:12:
+fixedvector.h:112:26: error: ‘::end’ has not been declared
+     fill(::begin(mData), ::end(mData), def);
+                          ^
+fixedvector.h:112:26: note: suggested alternative:
+In file included from /usr/include/c++/4.9/bits/basic_string.h:42:0,
+                 from /usr/include/c++/4.9/string:52,
+                 from /usr/include/c++/4.9/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.9/bits/ios_base.h:41,
+                 from /usr/include/c++/4.9/ios:42,
+                 from /usr/include/c++/4.9/ostream:38,
+                 from /usr/include/c++/4.9/iterator:64,
+                 from enum.h:9,
+                 from mon-cast.h:9,
+                 from DreamSheep.h:3:
+/usr/include/c++/4.9/initializer_list:99:5: note:   ‘std::end’
+     end(initializer_list<_Tp> __ils) noexcept
+     ^
+In file included from ray.h:9:0,
+                 from beam.h:11,
+                 from ouch.h:11,
+                 from actor.h:6,
+                 from player.h:15,
+                 from branch.h:11,
+                 from DreamSheep.h:12:
+fixedarray.h: At global scope:
+fixedarray.h:60:30: error: ‘pair’ does not name a type
+     TYPE& operator () (const pair<First,Second> &p)
+                              ^
+fixedarray.h:60:34: error: expected ‘,’ or ‘...’ before ‘<’ token
+     TYPE& operator () (const pair<First,Second> &p)
+                                  ^
+fixedarray.h:72:36: error: ‘pair’ does not name a type
+     const TYPE& operator () (const pair<First,Second> &p) const
+                                    ^
+fixedarray.h:72:40: error: expected ‘,’ or ‘...’ before ‘<’ token
+     const TYPE& operator () (const pair<First,Second> &p) const
+                                        ^
+fixedarray.h: In member function ‘TYPE& FixedArray<TYPE, WIDTH, HEIGHT>::operator()(int)’:
+fixedarray.h:62:22: error: ‘p’ was not declared in this scope
+         return mData[p.first][p.second];
+                      ^
+fixedarray.h: In member function ‘const TYPE& FixedArray<TYPE, WIDTH, HEIGHT>::operator()(int) const’:
+fixedarray.h:74:22: error: ‘p’ was not declared in this scope
+         return mData[p.first][p.second];
+                      ^
+In file included from ray.h:10:0,
+                 from beam.h:11,
+                 from ouch.h:11,
+                 from actor.h:6,
+                 from player.h:15,
+                 from branch.h:11,
+                 from DreamSheep.h:12:
+geom2d.h: At global scope:
+geom2d.h:16:39: error: expected ‘;’ at end of member declaration
+     vector operator+(const vector &v) const PURE;
+                                       ^
+geom2d.h:16:45: error: ‘PURE’ does not name a type
+     vector operator+(const vector &v) const PURE;
+                                             ^
+geom2d.h:17:24: error: expected ‘;’ at end of member declaration
+     vector operator-() const PURE;
+                        ^
+geom2d.h:17:30: error: ‘PURE’ does not name a type
+     vector operator-() const PURE;
+                              ^
+geom2d.h:19:39: error: expected ‘;’ at end of member declaration
+     vector operator-(const vector &v) const PURE;
+                                       ^
+geom2d.h:19:45: error: ‘PURE’ does not name a type
+     vector operator-(const vector &v) const PURE;
+                                             ^
+geom2d.h:22:45: error: expected initializer before ‘PURE’
+ vector operator*(double t, const vector &v) PURE;
+                                             ^
+geom2d.h:79:35: error: expected ‘;’ at end of member declaration
+     double index(const vector &v) const PURE;
+                                   ^
+geom2d.h:79:41: error: ‘PURE’ does not name a type
+     double index(const vector &v) const PURE;
+                                         ^
+In file included from beam.h:11:0,
+                 from ouch.h:11,
+                 from actor.h:6,
+                 from player.h:15,
+                 from branch.h:11,
+                 from DreamSheep.h:12:
+ray.h:24:5: error: ‘coord_def’ does not name a type
+     coord_def pos() const;
+     ^
+In file included from beam.h:12:0,
+                 from ouch.h:11,
+                 from actor.h:6,
+                 from player.h:15,
+                 from branch.h:11,
+                 from DreamSheep.h:12:
+spl-cast.h:82:23: error: ‘string’ does not name a type
+                 const string &title = "Your Spells",
+                       ^
+spl-cast.h:83:50: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]
+                 spell_selector selector = nullptr);
+                                                  ^
+spl-cast.h:101:1: error: ‘vector’ does not name a type
+ vector<string> desc_success_chance(const monster_info& mi, int pow, bool evoked,
+ ^
+spl-cast.h:112:1: error: ‘string’ does not name a type
+ string failure_rate_to_string(int fail);
+ ^
+spl-cast.h:116:1: error: ‘string’ does not name a type
+ string spell_power_string(spell_type spell, bool rod = false);
+ ^
+spl-cast.h:117:1: error: ‘string’ does not name a type
+ string spell_range_string(spell_type spell, bool rod = false);
+ ^
+spl-cast.h:118:1: error: ‘string’ does not name a type
+ string range_string(int range, int maxrange, char32_t caster_char);
+ ^
+spl-cast.h:119:1: error: ‘string’ does not name a type
+ string spell_schools_string(spell_type spell);
+ ^
+spl-cast.h:120:1: error: ‘string’ does not name a type
+ string spell_hunger_string(spell_type spell, bool rod = false);
+ ^
+spl-cast.h:121:1: error: ‘string’ does not name a type
+ string spell_noise_string(spell_type spell, int chop_wiz_display_width = 0);
+ ^
+spl-cast.h:123:37: error: ‘set’ has not been declared
+ void spell_skills(spell_type spell, set<skill_type> &skills);
+                                     ^
+spl-cast.h:123:40: error: expected ‘,’ or ‘...’ before ‘<’ token
+ void spell_skills(spell_type spell, set<skill_type> &skills);
+                                        ^
+In file included from ouch.h:11:0,
+                 from actor.h:6,
+                 from player.h:15,
+                 from branch.h:11,
+                 from DreamSheep.h:12:
+beam.h:52:5: error: ‘colour_t’ does not name a type
+     colour_t    colour = BLACK;
+     ^
+beam.h:58:5: error: ‘item_def’ does not name a type
+     item_def*   item = nullptr;        // item to drop
+     ^
+beam.h:59:5: error: ‘coord_def’ does not name a type
+     coord_def   source = {0,0};           // beam origin
+     ^
+beam.h:60:5: error: ‘coord_def’ does not name a type
+     coord_def   target = {0,0};           // intended target
+     ^
+beam.h:66:5: error: ‘mid_t’ does not name a type
+     mid_t       source_id = MID_NOBODY;// The mid of the source (remains
+     ^
+beam.h:69:5: error: ‘string’ does not name a type
+     string source_name = "";      // The name of the source, should it
+     ^
+beam.h:72:5: error: ‘string’ does not name a type
+     string name = "";
+     ^
+beam.h:73:5: error: ‘string’ does not name a type
+     string short_name = "";
+     ^
+beam.h:74:5: error: ‘string’ does not name a type
+     string hit_verb = "";         // The verb to use when this beam hits
+     ^
+beam.h:79:5: error: ‘string’ does not name a type
+     string hit_noise_msg = "";    // Message to give player for each hit
+     ^
+beam.h:81:5: error: ‘string’ does not name a type
+     string explode_noise_msg = "";  // Message to give player if the explosion
+     ^
+beam.h:87:5: error: ‘string’ does not name a type
+     string aux_source = "";       // source of KILL_MISC beams
+     ^
+beam.h:117:5: error: ‘vector’ does not name a type
+     vector<coord_def> path_taken = {}; // Path beam took.
+     ^
+beam.h:130:5: error: ‘map’ does not name a type
+     map<mid_t, int> hit_count;   // how many times targets were affected
+     ^
+beam.h:141:5: error: ‘coord_def’ does not name a type
+     coord_def bounce_pos = {0,0}; // position of latest wall bounce,
+     ^
+beam.h:145:5: error: ‘mid_t’ does not name a type
+     mid_t reflector = MID_NOBODY; // latest thing to reflect beam
+     ^
+beam.h:177:5: error: ‘string’ does not name a type
+     string get_short_name() const;
+     ^
+beam.h:178:5: error: ‘string’ does not name a type
+     string get_source_name() const;
+     ^
+beam.h:183:32: error: ‘coord_def’ does not name a type
+     bool can_affect_wall(const coord_def& p) const;
+                                ^
+beam.h:189:24: error: ‘monster_info’ does not name a type
+     bool nice_to(const monster_info& mi) const;
+                        ^
+beam.h:192:21: error: ‘coord_def’ does not name a type
+     void draw(const coord_def& p);
+                     ^
+beam.h:198:36: error: ‘coord_def’ does not name a type
+     bool explosion_draw_cell(const coord_def& p);
+                                    ^
+beam.h:199:38: error: ‘coord_def’ does not name a type
+     void explosion_affect_cell(const coord_def& p);
+                                      ^
+beam.h:200:59: error: ‘coord_def’ does not name a type
+     void determine_affected_cells(explosion_map& m, const coord_def& delta,
+                                                           ^
+beam.h:212:5: error: ‘coord_def’ does not name a type
+     coord_def pos() const;
+     ^
+beam.h:213:5: error: ‘coord_def’ does not name a type
+     coord_def leg_source() const;
+     ^
+beam.h:231:5: error: ‘set’ does not name a type
+     set<string> message_cache;
+     ^
+beam.h:236:27: error: ‘vector’ has not been declared
+                           vector<string> &messages);
+                           ^
+beam.h:236:33: error: expected ‘,’ or ‘...’ before ‘<’ token
+                           vector<string> &messages);
+                                 ^
+beam.h:305:52: error: ‘string’ does not name a type
+ bool enchant_monster_invisible(monster* mon, const string &how);
+                                                    ^
+beam.h:318:61: error: ‘string’ has not been declared
+ bool curare_actor(actor* source, actor* target, int levels, string name,
+                                                             ^
+beam.h:319:19: error: ‘string’ has not been declared
+                   string source_name);
+                   ^
+beam.h:320:54: error: ‘string’ has not been declared
+ int silver_damages_victim(actor* victim, int damage, string &dmg_msg);
+                                                      ^
+beam.h:323:21: error: ‘coord_def’ was not declared in this scope
+ bool imb_can_splash(coord_def origin, coord_def center,
+                     ^
+beam.h:323:39: error: ‘coord_def’ was not declared in this scope
+ bool imb_can_splash(coord_def origin, coord_def center,
+                                       ^
+beam.h:324:21: error: ‘vector’ was not declared in this scope
+                     vector<coord_def> path_taken, coord_def target);
+                     ^
+beam.h:324:21: note: suggested alternatives:
+In file included from /usr/include/c++/4.9/vector:64:0,
+                 from /usr/include/c++/4.9/bits/random.h:34,
+                 from /usr/include/c++/4.9/random:49,
+                 from /usr/include/c++/4.9/bits/stl_algo.h:66,
+                 from /usr/include/c++/4.9/algorithm:62,
+                 from DreamSheep.h:5:
+/usr/include/c++/4.9/bits/stl_vector.h:214:11: note:   ‘std::vector’
+     class vector : protected _Vector_base<_Tp, _Alloc>
+           ^
+In file included from ray.h:10:0,
+                 from beam.h:11,
+                 from ouch.h:11,
+                 from actor.h:6,
+                 from player.h:15,
+                 from branch.h:11,
+                 from DreamSheep.h:12:
+geom2d.h:7:8: note:   ‘geom::vector’
+ struct vector
+        ^
+In file included from ouch.h:11:0,
+                 from actor.h:6,
+                 from player.h:15,
+                 from branch.h:11,
+                 from DreamSheep.h:12:
+beam.h:324:28: error: ‘coord_def’ was not declared in this scope
+                     vector<coord_def> path_taken, coord_def target);
+                            ^
+beam.h:324:39: error: ‘path_taken’ was not declared in this scope
+                     vector<coord_def> path_taken, coord_def target);
+                                       ^
+beam.h:324:51: error: ‘coord_def’ was not declared in this scope
+                     vector<coord_def> path_taken, coord_def target);
+                                                   ^
+beam.h:324:67: error: expression list treated as compound expression in initializer [-fpermissive]
+                     vector<coord_def> path_taken, coord_def target);
+                                                                   ^
+beam.h:330:25: error: variable or field ‘create_feat_splash’ declared void
+ void create_feat_splash(coord_def center, int radius, int nattempts);
+                         ^
+beam.h:330:25: error: ‘coord_def’ was not declared in this scope
+beam.h:330:43: error: expected primary-expression before ‘int’
+ void create_feat_splash(coord_def center, int radius, int nattempts);
+                                           ^
+beam.h:330:55: error: expected primary-expression before ‘int’
+ void create_feat_splash(coord_def center, int radius, int nattempts);
+                                                       ^
+In file included from actor.h:6:0,
+                 from player.h:15,
+                 from branch.h:11,
+                 from DreamSheep.h:12:
+ouch.h:74:55: error: ‘string’ has not been declared
+ int check_your_resists(int hurted, beam_type flavour, string source,
+                                                       ^
+ouch.h:80:1: error: ‘string’ does not name a type
+ string morgue_name(string char_name, time_t when_crawl_got_even);
+ ^
+ouch.h:83:49: error: ‘mid_t’ has not been declared
+ void ouch(int dam, kill_method_type death_type, mid_t source = MID_NOBODY,
+                                                 ^
+ouch.h:83:64: error: ‘MID_NOBODY’ was not declared in this scope
+ void ouch(int dam, kill_method_type death_type, mid_t source = MID_NOBODY,
+                                                                ^
+In file included from mon-cast.h:9:0,
+                 from DreamSheep.h:3:
+enum.h:149:18: error: expected constructor, destructor, or type conversion before ‘(’ token
+     COMPILE_CHECK(is_enum<flagT>::value)
+                  ^
+enum.h:155:24: note: in definition of macro ‘EXPANDMACRO’
+ #define EXPANDMACRO(x) x
+                        ^
+enum.h:182:17: note: in expansion of macro ‘DEF_BITFIELD_OPERATORS’
+     EXPANDMACRO(DEF_BITFIELD_OPERATORS(fieldT, __VA_ARGS__, ))
+                 ^
+actor.h:16:1: note: in expansion of macro ‘DEF_BITFIELD’
+ DEF_BITFIELD(ev_ignore_type, ev_ignore_bit);
+ ^
+In file included from player.h:15:0,
+                 from branch.h:11,
+                 from DreamSheep.h:12:
+actor.h:26:5: error: ‘mid_t’ does not name a type
+     mid_t        mid;
+     ^
+actor.h:32:13: error: ‘player’ does not name a type
+     virtual player* as_player() = 0;
+             ^
+actor.h:34:19: error: ‘player’ does not name a type
+     virtual const player* as_player() const = 0;
+                   ^
+actor.h:49:31: error: ‘coord_def’ does not name a type
+     virtual void moveto(const coord_def &c, bool clear_net = true) = 0;
+                               ^
+actor.h:54:36: error: ‘coord_def’ does not name a type
+     virtual bool move_to_pos(const coord_def &c, bool clear_net = true,
+                                    ^
+actor.h:57:47: error: ‘coord_def’ does not name a type
+     virtual void apply_location_effects(const coord_def &oldpos,
+                                               ^
+actor.h:61:37: error: ‘coord_def’ does not name a type
+     virtual void set_position(const coord_def &c);
+                                     ^
+actor.h:62:11: error: ‘coord_def’ does not name a type
+     const coord_def& pos() const { return position; }
+           ^
+actor.h:69:33: error: ‘coord_def’ does not name a type
+     virtual bool blink_to(const coord_def &c, bool quiet = false) = 0;
+                                 ^
+actor.h:84:41: error: ‘coord_def’ does not name a type
+     virtual bool can_pass_through(const coord_def &c) const;
+                                         ^
+actor.h:87:37: error: ‘coord_def’ does not name a type
+             bool is_habitable(const coord_def &pos) const;
+                                     ^
+actor.h:94:13: error: ‘item_def’ does not name a type
+     virtual item_def *weapon(int which_attack = -1) const = 0;
+             ^
+actor.h:95:11: error: ‘item_def’ does not name a type
+     const item_def *primary_weapon() const
+           ^
+actor.h:99:43: error: ‘item_def’ does not name a type
+     virtual random_var attack_delay(const item_def *projectile = nullptr,
+                                           ^
+actor.h:102:13: error: ‘item_def’ does not name a type
+     virtual item_def *shield() const = 0;
+             ^
+actor.h:103:13: error: ‘item_def’ does not name a type
+     virtual item_def *slot_item(equipment_type eq,
+             ^
+actor.h:111:32: error: ‘vector’ has not been declared
+                                vector<item_def> *matches = nullptr) const = 0;
+                                ^
+actor.h:111:38: error: expected ‘,’ or ‘...’ before ‘<’ token
+                                vector<item_def> *matches = nullptr) const = 0;
+                                      ^
+actor.h:113:46: error: ‘item_def’ does not name a type
+     virtual hands_reqd_type hands_reqd(const item_def &item,
+                                              ^
+actor.h:116:34: error: ‘item_def’ does not name a type
+             bool can_wield(const item_def* item,
+                                  ^
+actor.h:121:34: error: ‘item_def’ does not name a type
+     virtual bool can_wield(const item_def &item,
+                                  ^
+actor.h:126:36: error: ‘item_def’ does not name a type
+     virtual bool could_wield(const item_def &item,
+                                    ^
+actor.h:142:13: error: ‘string’ does not name a type
+     virtual string name(description_level_type type,
+             ^
+actor.h:145:13: error: ‘string’ does not name a type
+     virtual string pronoun(pronoun_type which_pronoun,
+             ^
+actor.h:147:13: error: ‘string’ does not name a type
+     virtual string conj_verb(const string &verb) const = 0;
+             ^
+actor.h:148:13: error: ‘string’ does not name a type
+     virtual string hand_name(bool plural, bool *can_plural = nullptr) const = 0;
+             ^
+actor.h:149:13: error: ‘string’ does not name a type
+     virtual string foot_name(bool plural, bool *can_plural = nullptr) const = 0;
+             ^
+actor.h:150:13: error: ‘string’ does not name a type
+     virtual string arm_name(bool plural, bool *can_plural = nullptr) const = 0;
+             ^
+actor.h:171:33: error: ‘coord_def’ does not name a type
+     virtual bool see_cell(const coord_def &c) const;
+                                 ^
+actor.h:172:42: error: ‘coord_def’ does not name a type
+     virtual bool see_cell_no_trans(const coord_def &c) const;
+                                          ^
+actor.h:189:34: error: ‘string’ does not name a type
+     virtual bool malmutate(const string &reason) = 0;
+                                  ^
+actor.h:197:23: error: ‘string’ has not been declared
+                       string source = "",
+                       ^
+actor.h:198:23: error: ‘string’ has not been declared
+                       string aux = "",
+                       ^
+actor.h:202:45: error: ‘string’ does not name a type
+     virtual void banish(actor *agent, const string &who = "",
+                                             ^
+actor.h:209:58: error: ‘string’ has not been declared
+     virtual void paralyse(actor *attacker, int strength, string source = "") = 0;
+                                                          ^
+actor.h:231:30: error: ‘string’ has not been declared
+                              string source = "") = 0;
+                              ^
+actor.h:308:26: error: ‘vector’ has not been declared
+                          vector<item_def> *matches = nullptr) const;
+                          ^
+actor.h:308:32: error: expected ‘,’ or ‘...’ before ‘<’ token
+                          vector<item_def> *matches = nullptr) const;
+                                ^
+actor.h:332:37: error: ‘coord_def’ does not name a type
+     virtual bool can_cling_to(const coord_def& p) const;
+                                     ^
+actor.h:397:13: error: ‘level_id’ does not name a type
+     virtual level_id shaft_dest(bool known) const;
+             ^
+actor.h:400:5: error: ‘coord_def’ does not name a type
+     coord_def position;
+     ^
+actor.h:402:5: error: ‘CrawlHashTable’ does not name a type
+     CrawlHashTable props;
+     ^
+actor.h:410:5: error: ‘mid_t’ does not name a type
+     mid_t constricted_by;
+     ^
+actor.h:414:13: error: ‘map’ does not name a type
+     typedef map<mid_t, int> constricting_t;
+             ^
+actor.h:416:5: error: ‘constricting_t’ does not name a type
+     constricting_t *constricting;
+     ^
+actor.h:420:28: error: ‘mid_t’ has not been declared
+     void stop_constricting(mid_t whom, bool intentional = false,
+                            ^
+actor.h:427:45: error: ‘coord_def’ does not name a type
+     void clear_constrictions_far_from(const coord_def &where);
+                                             ^
+actor.h:440:5: error: ‘string’ does not name a type
+     string describe_props() const;
+     ^
+actor.h:442:5: error: ‘string’ does not name a type
+     string resist_margin_phrase(int margin) const;
+     ^
+actor.h:444:18: error: ‘coord_def’ has not been declared
+     void collide(coord_def newpos, const actor *agent, int pow);
+                  ^
+actor.h:447:27: error: ‘mid_t’ has not been declared
+     void end_constriction(mid_t whom, bool intentional, bool quiet);
+                           ^
+actor.h:109:17: error: default argument missing for parameter 3 of ‘virtual int actor::scan_artefacts(artefact_prop_type, bool, int) const’
+     virtual int scan_artefacts(artefact_prop_type which_property,
+                 ^
+actor.h:197:39: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]
+                       string source = "",
+                                       ^
+actor.h:198:36: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]
+                       string aux = "",
+                                    ^
+actor.h:202:59: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]
+     virtual void banish(actor *agent, const string &who = "",
+                                                           ^
+actor.h:209:74: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]
+     virtual void paralyse(actor *attacker, int strength, string source = "") = 0;
+                                                                          ^
+actor.h:231:46: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]
+                              string source = "") = 0;
+                                              ^
+actor.h:307:10: error: default argument missing for parameter 2 of ‘bool actor::has_notele_item(bool, int) const’
+     bool has_notele_item(bool calc_unid = true,
+          ^
+In file included from bitary.h:14:0,
+                 from player.h:17,
+                 from branch.h:11,
+                 from DreamSheep.h:12:
+defines.h:64:14: error: expected constructor, destructor, or type conversion before ‘(’ token
+ COMPILE_CHECK(ITEM_IN_SHOP > NON_ITEM + MAX_MONSTERS);
+              ^
+In file included from player.h:17:0,
+                 from branch.h:11,
+                 from DreamSheep.h:12:
+bitary.h:46:5: error: ‘bitset’ does not name a type
+     bitset<SIZE> data;
+     ^
+bitary.h: In member function ‘void FixedBitVector<SIZE>::reset()’:
+bitary.h:50:9: error: ‘data’ was not declared in this scope
+         data.reset();
+         ^
+bitary.h: In member function ‘bool FixedBitVector<SIZE>::get(unsigned int) const’:
+bitary.h:64:16: error: ‘data’ was not declared in this scope
+         return data[i];
+                ^
+bitary.h: In member function ‘void FixedBitVector<SIZE>::set(unsigned int, bool)’:
+bitary.h:78:9: error: ‘data’ was not declared in this scope
+         data[i] = value;
+         ^
+bitary.h: In member function ‘unsigned int FixedBitVector<SIZE>::count() const’:
+bitary.h:83:16: error: ‘data’ was not declared in this scope
+         return data.count();
+                ^
+bitary.h: In member function ‘bool FixedBitVector<SIZE>::any() const’:
+bitary.h:88:16: error: ‘data’ was not declared in this scope
+         return data.any();
+                ^
+bitary.h: In member function ‘FixedBitVector<SIZE>& FixedBitVector<SIZE>::operator|=(const FixedBitVector<SIZE>&)’:
+bitary.h:93:9: error: ‘data’ was not declared in this scope
+         data |= x.data;
+         ^
+bitary.h: In member function ‘FixedBitVector<SIZE>& FixedBitVector<SIZE>::operator&=(const FixedBitVector<SIZE>&)’:
+bitary.h:99:9: error: ‘data’ was not declared in this scope
+         data &= x.data;
+         ^
+bitary.h: In member function ‘void FixedBitVector<SIZE>::init(bool)’:
+bitary.h:105:9: error: ‘data’ was not declared in this scope
+         data.reset();
+         ^
+In file included from player.h:18:0,
+                 from branch.h:11,
+                 from DreamSheep.h:12:
+kills.h: At global scope:
+kills.h:64:39: error: ‘level_id’ has not been declared
+     void add_kill(const monster* mon, level_id place);
+                                       ^
+kills.h:65:20: error: ‘level_id’ has not been declared
+     void add_place(level_id place, bool force = false);
+                    ^
+kills.h:69:5: error: ‘string’ does not name a type
+     string info(const kill_monster_desc &md) const;
+     ^
+kills.h:70:5: error: ‘string’ does not name a type
+     string base_name(const kill_monster_desc &md) const;
+     ^
+kills.h:76:5: error: ‘vector’ does not name a type
+     vector<level_id> places; // Places where we've killed the beast.
+     ^
+kills.h:78:5: error: ‘string’ does not name a type
+     string append_places(const kill_monster_desc &md, const string &name) const;
+     ^
+kills.h:91:5: error: ‘string’ does not name a type
+     string info() const;
+     ^
+kills.h:93:5: error: ‘string’ does not name a type
+     string ghost_name;
+     ^
+kills.h:95:5: error: ‘level_id’ does not name a type
+     level_id place;
+     ^
+kills.h:103:5: error: ‘string’ does not name a type
+     string base_name;
+     ^
+kills.h:104:5: error: ‘string’ does not name a type
+     string desc;
+     ^
+kills.h:109:5: error: ‘vector’ does not name a type
+     vector<level_id> places;
+     ^
+kills.h: In constructor ‘kill_exp::kill_exp(const kill_def&, const kill_monster_desc&)’:
+kills.h:112:40: error: class ‘kill_exp’ does not have any field named ‘base_name’
+         : nkills(k.kills), exp(k.exp), base_name(k.base_name(md)),
+                                        ^
+kills.h:112:52: error: ‘const class kill_def’ has no member named ‘base_name’
+         : nkills(k.kills), exp(k.exp), base_name(k.base_name(md)),
+                                                    ^
+kills.h:113:11: error: class ‘kill_exp’ does not have any field named ‘desc’
+           desc(k.info(md)),
+           ^
+kills.h:113:18: error: ‘const class kill_def’ has no member named ‘info’
+           desc(k.info(md)),
+                  ^
+kills.h:114:53: error: class ‘kill_exp’ does not have any field named ‘places’
+           monnum(md.monnum), modifier(md.modifier), places(k.places)
+                                                     ^
+kills.h:114:62: error: ‘const class kill_def’ has no member named ‘places’
+           monnum(md.monnum), modifier(md.modifier), places(k.places)
+                                                              ^
+kills.h: In constructor ‘kill_exp::kill_exp(const kill_ghost&)’:
+kills.h:119:35: error: class ‘kill_exp’ does not have any field named ‘base_name’
+         : nkills(1), exp(kg.exp), base_name(), desc(kg.info()),
+                                   ^
+kills.h:119:48: error: class ‘kill_exp’ does not have any field named ‘desc’
+         : nkills(1), exp(kg.exp), base_name(), desc(kg.info()),
+                                                ^
+kills.h:119:56: error: ‘const class kill_ghost’ has no member named ‘info’
+         : nkills(1), exp(kg.exp), base_name(), desc(kg.info()),
+                                                        ^
+kills.h:122:9: error: ‘places’ was not declared in this scope
+         places.push_back(kg.place);
+         ^
+kills.h:122:29: error: ‘const class kill_ghost’ has no member named ‘place’
+         places.push_back(kg.place);
+                             ^
+kills.h: In member function ‘bool kill_exp::operator<(const kill_exp&) const’:
+kills.h:128:31: error: ‘base_name’ was not declared in this scope
+         return exp == b.exp? (base_name < b.base_name) : (exp > b.exp);
+                               ^
+kills.h:128:45: error: ‘const struct kill_exp’ has no member named ‘base_name’
+         return exp == b.exp? (base_name < b.base_name) : (exp > b.exp);
+                                             ^
+kills.h: At global scope:
+kills.h:142:19: error: ‘vector’ has not been declared
+     int get_kills(vector<kill_exp> &v) const;
+                   ^
+kills.h:142:25: error: expected ‘,’ or ‘...’ before ‘<’ token
+     int get_kills(vector<kill_exp> &v) const;
+                         ^
+kills.h:148:13: error: ‘map’ does not name a type
+     typedef map<kill_monster_desc, kill_def,
+             ^
+kills.h:150:13: error: ‘vector’ does not name a type
+     typedef vector<kill_ghost> ghost_vec;
+             ^
+kills.h:152:5: error: ‘kill_map’ does not name a type
+     kill_map    kills;
+     ^
+kills.h:153:5: error: ‘ghost_vec’ does not name a type
+     ghost_vec   ghosts;
+     ^
+kills.h:176:5: error: ‘string’ does not name a type
+     string kill_info() const;
+     ^
+kills.h:182:24: error: ‘string’ has not been declared
+     void add_kill_info(string &, vector<kill_exp> &,
+                        ^
+kills.h:182:34: error: ‘vector’ has not been declared
+     void add_kill_info(string &, vector<kill_exp> &,
+                                  ^
+kills.h:182:40: error: expected ‘,’ or ‘...’ before ‘<’ token
+     void add_kill_info(string &, vector<kill_exp> &,
+                                        ^
+In file included from player.h:19:0,
+                 from branch.h:11,
+                 from DreamSheep.h:12:
+place-info.h:36:11: error: ‘string’ does not name a type
+     const string short_name() const;
+           ^
+In file included from player.h:20:0,
+                 from branch.h:11,
+                 from DreamSheep.h:12:
+quiver.h:33:33: error: ‘item_def’ does not name a type
+     void get_desired_item(const item_def** item_out, int* slot_out) const;
+                                 ^
+quiver.h:34:23: error: ‘string’ has not been declared
+     int get_fire_item(string* no_item_reason = 0) const;
+                       ^
+quiver.h:35:25: error: ‘vector’ has not been declared
+     void get_fire_order(vector<int>& v, bool manual) const;
+                         ^
+quiver.h:35:31: error: expected ‘,’ or ‘...’ before ‘<’ token
+     void get_fire_order(vector<int>& v, bool manual) const;
+                               ^
+quiver.h:38:27: error: ‘item_def’ does not name a type
+     void set_quiver(const item_def &item, ammo_t ammo_type);
+                           ^
+quiver.h:40:30: error: ‘item_def’ does not name a type
+     void on_item_fired(const item_def &item, bool explicitly_chosen = false);
+                              ^
+quiver.h:41:33: error: ‘item_def’ does not name a type
+     void on_item_fired_fi(const item_def &item);
+                                 ^
+quiver.h:50:26: error: ‘vector’ has not been declared
+     void _get_fire_order(vector<int>&,
+                          ^
+quiver.h:50:32: error: expected ‘,’ or ‘...’ before ‘<’ token
+     void _get_fire_order(vector<int>&,
+                                ^
+quiver.h:57:5: error: ‘item_def’ does not name a type
+     item_def m_last_weapon;
+     ^
+quiver.h:60:5: error: ‘item_def’ does not name a type
+     item_def m_last_used_of_type[NUM_AMMO];
+     ^
+In file included from player.h:22:0,
+                 from branch.h:11,
+                 from DreamSheep.h:12:
+species.h:14:61: error: expected initializer before ‘PURE’
+ undead_state_type species_undead_type(species_type species) PURE;
+                                                             ^
+species.h:35:1: error: ‘string’ does not name a type
+ string species_name(species_type speci, species_name_type spname = SPNAME_PLAIN);
+ ^
+species.h:36:35: error: ‘string’ does not name a type
+ species_type str_to_species(const string &species);
+                                   ^
+species.h:37:1: error: ‘string’ does not name a type
+ string species_walking_verb(species_type sp);
+ ^
+species.h:38:7: error: ‘vector’ does not name a type
+ const vector<string>& fake_mutations(species_type species, bool terse);
+       ^
+species.h:45:1: error: ‘string’ does not name a type
+ string species_prayer_action(species_type species);
+ ^
+In file included from branch.h:11:0,
+                 from DreamSheep.h:12:
+player.h:84:8: error: ‘player’ does not name a type
+ extern player you;
+        ^
+player.h:96:5: error: ‘string’ does not name a type
+     string chr_species_name;
+     ^
+player.h:97:5: error: ‘string’ does not name a type
+     string chr_class_name;
+     ^
+player.h:98:5: error: ‘string’ does not name a type
+     string chr_god_name;
+     ^
+player.h:103:5: error: ‘string’ does not name a type
+     string your_name;
+     ^
+player.h:154:18: error: ‘item_def’ was not declared in this scope
+     FixedVector< item_def, ENDOFPACK > inv;
+                  ^
+player.h:154:38: error: template argument 1 is invalid
+     FixedVector< item_def, ENDOFPACK > inv;
+                                      ^
+player.h:159:5: error: ‘set’ does not name a type
+     set<spell_type> old_vehumet_gifts, vehumet_gifts;
+     ^
+player.h:200:5: error: ‘list’ does not name a type
+     list<skill_type> exercises;     ///< recent practise events
+     ^
+player.h:201:5: error: ‘list’ does not name a type
+     list<skill_type> exercises_all; ///< also include events for disabled skills
+     ^
+player.h:202:5: error: ‘set’ does not name a type
+     set<skill_type> stop_train;     ///< need to check if we can still train
+     ^
+player.h:203:5: error: ‘set’ does not name a type
+     set<skill_type> start_train;    ///< we can resume training
+     ^
+player.h:233:5: error: ‘string’ does not name a type
+     string jiyva_second_name;       // Random second name of Jiyva
+     ^
+player.h:259:5: error: ‘vector’ does not name a type
+     vector<demon_trait> demonic_traits;
+     ^
+player.h:274:5: error: ‘chrono’ does not name a type
+     chrono::milliseconds real_time_ms;       // real time played
+     ^
+player.h:275:5: error: ‘chrono’ does not name a type
+     chrono::milliseconds real_time_delta;    // real time since last command
+     ^
+player.h:293:5: error: ‘set’ does not name a type
+     set<string> uniq_map_tags;
+     ^
+player.h:294:5: error: ‘set’ does not name a type
+     set<string> uniq_map_names;
+     ^
+player.h:296:5: error: ‘map’ does not name a type
+     map<level_id, vector<string> > vault_list;
+     ^
+player.h:303:5: error: ‘vector’ does not name a type
+     vector<mid_t> beholders;
+     ^
+player.h:306:5: error: ‘vector’ does not name a type
+     vector<mid_t> fearmongers;
+     ^
+player.h:310:5: error: ‘vector’ does not name a type
+     vector<daction_type> dactions;
+     ^
+player.h:313:5: error: ‘vector’ does not name a type
+     vector<level_pos> level_stack;
+     ^
+player.h:316:5: error: ‘id_arr’ does not name a type
+     id_arr type_ids;
+     ^
+player.h:319:5: error: ‘string’ does not name a type
+     string prev_save_version;
+     ^
+player.h:322:5: error: ‘mid_t’ does not name a type
+     mid_t last_mid;
+     ^
+player.h:325:5: error: ‘map’ does not name a type
+     map<pair<caction_type, int>, FixedVector<int, 27> > action_count;
+     ^
+player.h:335:5: error: ‘vector’ does not name a type
+     vector<pair<uncancellable_type, int> > uncancel;
+     ^
+player.h:338:5: error: ‘vector’ does not name a type
+     vector<mid_t> recall_list;
+     ^
+player.h:347:5: error: ‘coord_def’ does not name a type
+     coord_def      prev_grd_targ;
+     ^
+player.h:352:5: error: ‘level_id’ does not name a type
+     level_id travel_z;
+     ^
+player.h:354:5: error: ‘runrest’ does not name a type
+     runrest running;                    // Nonzero if running/traveling.
+     ^
+player.h:363:5: error: ‘vector’ does not name a type
+     vector<shared_ptr<Delay>> delay_queue; // pending actions
+     ^
+player.h:365:5: error: ‘chrono’ does not name a type
+     chrono::time_point<chrono::system_clock> last_keypress_time;
+     ^
+player.h:370:5: error: ‘map’ does not name a type
+     map<skill_type, int8_t> skill_boost; // Skill bonuses.
+     ^
+player.h:375:5: error: ‘map’ does not name a type
+     map<int,int> last_pickup;
+     ^
+player.h:385:5: error: ‘string’ does not name a type
+     string banished_by;
+     ^
+player.h:416:5: error: ‘string’ does not name a type
+     string escaped_death_aux;
+     ^
+player.h:419:5: error: ‘mid_t’ does not name a type
+     mid_t damage_source; // death source of last damage done to player
+     ^
+player.h:436:5: error: ‘package’ does not name a type
+     package *save;
+     ^
+player.h:448:29: error: ‘coord_def’ does not name a type
+     void set_position(const coord_def &c) override;
+                             ^
+player.h:450:23: error: ‘coord_def’ does not name a type
+     void moveto(const coord_def &c, bool clear_net = true) override;
+                       ^
+player.h:451:28: error: ‘coord_def’ does not name a type
+     bool move_to_pos(const coord_def &c, bool clear_net = true,
+                            ^
+player.h:454:24: error: ‘coord_def’ does not name a type
+     void shiftto(const coord_def &c);
+                        ^
+player.h:455:25: error: ‘coord_def’ does not name a type
+     bool blink_to(const coord_def& c, bool quiet = false) override;
+                         ^
+player.h:471:28: error: ‘coord_def’ does not name a type
+     int visible_igrd(const coord_def&) const;
+                            ^
+player.h:485:25: error: ‘coord_def’ does not name a type
+     bool see_cell(const coord_def& p) const override;
+                         ^
+player.h:488:36: error: ‘coord_def’ does not name a type
+     bool trans_wall_blocking(const coord_def &c) const;
+                                    ^
+player.h:504:33: error: ‘coord_def’ does not name a type
+     monster* get_beholder(const coord_def &pos) const;
+                                 ^
+player.h:517:35: error: ‘coord_def’ does not name a type
+     monster* get_fearmonger(const coord_def &pos) const;
+                                   ^
+player.h:525:32: error: ‘coord_def’ does not name a type
+     bool made_nervous_by(const coord_def &pos);
+                                ^
+player.h:531:5: error: ‘string’ does not name a type
+     string shout_verb(bool directed = false) const;
+     ^
+player.h:534:5: error: ‘item_def’ does not name a type
+     item_def *slot_item(equipment_type eq, bool include_melded=false) const
+     ^
+player.h:537:28: error: ‘item_def’ does not name a type
+     int base_ac_from(const item_def &armour, int scale = 1) const;
+                            ^
+player.h:577:36: error: ‘item_def’ does not name a type
+     random_var  attack_delay(const item_def *projectile = nullptr,
+                                    ^
+player.h:603:24: error: ‘vector’ has not been declared
+                        vector<item_def> *matches = nullptr) const override;
+                        ^
+player.h:603:30: error: expected ‘,’ or ‘...’ before ‘<’ token
+                        vector<item_def> *matches = nullptr) const override;
+                              ^
+player.h:605:5: error: ‘item_def’ does not name a type
+     item_def *weapon(int which_attack = -1) const override;
+     ^
+player.h:606:5: error: ‘item_def’ does not name a type
+     item_def *shield() const override;
+     ^
+player.h:608:38: error: ‘item_def’ does not name a type
+     hands_reqd_type hands_reqd(const item_def &item,
+                                      ^
+player.h:611:31: error: ‘item_def’ does not name a type
+     bool      can_wield(const item_def &item,
+                               ^
+player.h:616:33: error: ‘item_def’ does not name a type
+     bool      could_wield(const item_def &item,
+                                 ^
+player.h:621:5: error: ‘string’ does not name a type
+     string name(description_level_type type, bool force_visible = false,
+     ^
+player.h:623:5: error: ‘string’ does not name a type
+     string pronoun(pronoun_type pro, bool force_visible = false) const override;
+     ^
+player.h:624:5: error: ‘string’ does not name a type
+     string conj_verb(const string &verb) const override;
+     ^
+player.h:625:5: error: ‘string’ does not name a type
+     string hand_name(bool plural, bool *can_plural = nullptr) const override;
+     ^
+player.h:626:5: error: ‘string’ does not name a type
+     string hands_verb(const string &plural_verb) const;
+     ^
+player.h:627:5: error: ‘string’ does not name a type
+     string hands_act(const string &plural_verb, const string &object) const;
+     ^
+player.h:628:5: error: ‘string’ does not name a type
+     string foot_name(bool plural, bool *can_plural = nullptr) const override;
+     ^
+player.h:629:5: error: ‘string’ does not name a type
+     string arm_name(bool plural, bool *can_plural = nullptr) const override;
+     ^
+player.h:630:5: error: ‘string’ does not name a type
+     string unarmed_attack_name() const;
+     ^
+player.h:638:45: error: ‘string’ has not been declared
+                         bool quiet = false, string *reason = nullptr) const;
+                                             ^
+player.h:647:26: error: ‘string’ does not name a type
+     bool malmutate(const string &reason) override;
+                          ^
+player.h:650:41: error: ‘string’ does not name a type
+     void banish(actor* /*agent*/, const string &who = "", const int power = 0,
+                                         ^
+player.h:664:37: error: ‘string’ has not been declared
+     void paralyse(actor *, int str, string source = "") override;
+                                     ^
+player.h:683:14: error: ‘string’ has not been declared
+              string source = "",
+              ^
+player.h:684:14: error: ‘string’ has not been declared
+              string aux = "",
+              ^
+player.h:721:5: error: ‘string’ does not name a type
+     string no_tele_reason(bool calc_unid = true, bool blink = false) const;
+     ^
+player.h:761:62: error: ‘string’ has not been declared
+     int beam_resists(bolt &beam, int hurted, bool doEffects, string source)
+                                                              ^
+player.h:791:52: error: ‘item_def’ does not name a type
+     float get_shield_skill_to_offset_penalty(const item_def &item);
+                                                    ^
+player.h:807:39: error: ‘coord_def’ does not name a type
+     void apply_location_effects(const coord_def &oldpos,
+                                       ^
+player.h:817:27: error: ‘level_id’ does not name a type
+     void goto_place(const level_id &level);
+                           ^
+player.h:822:5: error: ‘vector’ does not name a type
+     vector<PlaceInfo> get_all_place_info(bool visited_only = false,
+     ^
+player.h:555:13: error: ‘player* player::as_player()’ marked override, but does not override
+     player* as_player() override { return this; }
+             ^
+player.h:557:19: error: ‘const player* player::as_player() const’ marked override, but does not override
+     const player* as_player() const override { return this; }
+                   ^
+player.h:601:9: error: default argument missing for parameter 3 of ‘virtual int player::scan_artefacts(artefact_prop_type, bool, int) const’
+     int scan_artefacts(artefact_prop_type which_property,
+         ^
+player.h:650:55: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]
+     void banish(actor* /*agent*/, const string &who = "", const int power = 0,
+                                                       ^
+player.h:664:53: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]
+     void paralyse(actor *, int str, string source = "") override;
+                                                     ^
+player.h:683:30: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]
+              string source = "",
+                              ^
+player.h:684:27: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]
+              string aux = "",
+                           ^
+player.h: In member function ‘int player::real_time()’:
+player.h:273:30: error: ‘real_time_ms’ was not declared in this scope
+     int real_time() { return real_time_ms.count() / 1000; }
+                              ^
+player.h: In member function ‘virtual bool player::is_player() const’:
+player.h:550:33: error: ‘you’ was not declared in this scope
+         ASSERT(this == (actor*)&you); // there can be only one
+                                 ^
+player.h:550:36: error: ‘ASSERT’ was not declared in this scope
+         ASSERT(this == (actor*)&you); // there can be only one
+                                    ^
+player.h: At global scope:
+player.h:855:5: error: ‘string’ does not name a type
+     string name;
+     ^
+player.h:860:5: error: ‘string’ does not name a type
+     string species_name;
+     ^
+player.h:861:5: error: ‘string’ does not name a type
+     string class_name;
+     ^
+player.h:863:5: error: ‘string’ does not name a type
+     string god_name;
+     ^
+player.h:864:5: error: ‘string’ does not name a type
+     string jiyva_second_name;
+     ^
+player.h:872:5: error: ‘string’ does not name a type
+     string filename;
+     ^
+player.h:876:5: error: ‘string’ does not name a type
+     string short_desc() const;
+     ^
+player.h:884:56: error: ‘coord_def’ does not name a type
+                              bool stepped=false, const coord_def& old_pos=coord_def());
+                                                        ^
+player.h:884:85: error: ‘coord_def’ was not declared in this scope
+                              bool stepped=false, const coord_def& old_pos=coord_def());
+                                                                                     ^
+player.h:886:25: error: ‘coord_def’ does not name a type
+ bool check_moveto(const coord_def& p, const string &move_verb = "step",
+                         ^
+player.h:886:45: error: ‘string’ does not name a type
+ bool check_moveto(const coord_def& p, const string &move_verb = "step",
+                                             ^
+player.h:887:25: error: ‘string’ does not name a type
+                   const string &msg = "");
+                         ^
+player.h:887:41: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]
+                   const string &msg = "");
+                                         ^
+player.h:887:41: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]
+player.h:888:33: error: ‘coord_def’ does not name a type
+ bool check_moveto_terrain(const coord_def& p, const string &move_verb,
+                                 ^
+player.h:888:53: error: ‘string’ does not name a type
+ bool check_moveto_terrain(const coord_def& p, const string &move_verb,
+                                                     ^
+player.h:889:33: error: ‘string’ does not name a type
+                           const string &msg = "", bool *prompted = nullptr);
+                                 ^
+player.h:889:75: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]
+                           const string &msg = "", bool *prompted = nullptr);
+                                                                           ^
+player.h:890:31: error: ‘coord_def’ does not name a type
+ bool check_moveto_cloud(const coord_def& p, const string &move_verb = "step",
+                               ^
+player.h:890:51: error: ‘string’ does not name a type
+ bool check_moveto_cloud(const coord_def& p, const string &move_verb = "step",
+                                                   ^
+player.h:891:49: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]
+                         bool *prompted = nullptr);
+                                                 ^
+player.h:892:35: error: ‘coord_def’ does not name a type
+ bool check_moveto_exclusion(const coord_def& p,
+                                   ^
+player.h:893:35: error: ‘string’ does not name a type
+                             const string &move_verb = "step",
+                                   ^
+player.h:894:53: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]
+                             bool *prompted = nullptr);
+                                                     ^
+player.h:895:30: error: ‘coord_def’ does not name a type
+ bool check_moveto_trap(const coord_def& p, const string &move_verb = "step",
+                              ^
+player.h:895:50: error: ‘string’ does not name a type
+ bool check_moveto_trap(const coord_def& p, const string &move_verb = "step",
+                                                  ^
+player.h:896:33: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]
+         bool *prompted = nullptr);
+                                 ^
+player.h:898:32: error: ‘coord_def’ has not been declared
+ bool swap_check(monster* mons, coord_def &loc, bool quiet = false);
+                                ^
+player.h:900:32: error: ‘coord_def’ does not name a type
+ void move_player_to_grid(const coord_def& p, bool stepped);
+                                ^
+player.h: In function ‘bool player_in_branch(int)’:
+player.h:909:12: error: ‘you’ was not declared in this scope
+     return you.where_are_you == branch;
+            ^
+player.h: At global scope:
+player.h:914:28: error: ‘coord_def’ does not name a type
+ bool player_can_hear(const coord_def& p, int hear_distance = 999);
+                            ^
+player.h:1053:1: error: ‘string’ does not name a type
+ string describe_contamination(int level);
+ ^
+player.h:1071:32: error: ‘string’ has not been declared
+ bool poison_player(int amount, string source, string source_aux = "",
+                                ^
+player.h:1071:47: error: ‘string’ has not been declared
+ bool poison_player(int amount, string source, string source_aux = "",
+                                               ^
+player.h:1072:38: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]
+                    bool force = false);
+                                      ^
+player.h:1073:22: error: variable or field ‘paralyse_player’ declared void
+ void paralyse_player(string source, int amount = 0);
+                      ^
+player.h:1073:22: error: ‘string’ was not declared in this scope
+player.h:1073:22: note: suggested alternative:
+In file included from /usr/include/c++/4.9/iosfwd:39:0,
+                 from /usr/include/c++/4.9/ios:38,
+                 from /usr/include/c++/4.9/ostream:38,
+                 from /usr/include/c++/4.9/iterator:64,
+                 from enum.h:9,
+                 from mon-cast.h:9,
+                 from DreamSheep.h:3:
+/usr/include/c++/4.9/bits/stringfwd.h:62:33: note:   ‘std::string’
+   typedef basic_string<char>    string;   
+                                 ^
+In file included from branch.h:11:0,
+                 from DreamSheep.h:12:
+player.h:1073:37: error: expected primary-expression before ‘int’
+ void paralyse_player(string source, int amount = 0);
+                                     ^
+player.h:1080:32: error: ‘string’ has not been declared
+ bool miasma_player(actor *who, string source_aux = "");
+                                ^
+player.h:1080:54: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]
+ bool miasma_player(actor *who, string source_aux = "");
+                                                      ^
+player.h:1082:32: error: ‘string’ has not been declared
+ bool napalm_player(int amount, string source, string source_aux = "");
+                                ^
+player.h:1082:47: error: ‘string’ has not been declared
+ bool napalm_player(int amount, string source, string source_aux = "");
+                                               ^
+player.h:1082:69: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]
+ bool napalm_player(int amount, string source, string source_aux = "");
+                                                                     ^
+player.h:1095:40: error: ‘string’ has not been declared
+ bool invis_allowed(bool quiet = false, string *fail_reason = nullptr);
+                                        ^
+player.h:1096:41: error: ‘string’ has not been declared
+ bool flight_allowed(bool quiet = false, string *fail_reason = nullptr);
+                                         ^
+player.h:1100:23: error: variable or field ‘player_open_door’ declared void
+ void player_open_door(coord_def doorpos);
+                       ^
+player.h:1100:23: error: ‘coord_def’ was not declared in this scope
+player.h:1101:24: error: variable or field ‘player_close_door’ declared void
+ void player_close_door(coord_def doorpos);
+                        ^
+player.h:1101:24: error: ‘coord_def’ was not declared in this scope
+player.h:1116:49: error: ‘coord_def’ has not been declared
+ bool need_expiration_warning(duration_type dur, coord_def p = you.pos());
+                                                 ^
+player.h:1116:63: error: ‘you’ was not declared in this scope
+ bool need_expiration_warning(duration_type dur, coord_def p = you.pos());
+                                                               ^
+player.h:1117:30: error: ‘bool need_expiration_warning’ redeclared as different kind of symbol
+ bool need_expiration_warning(coord_def p = you.pos());
+                              ^
+player.h:1116:6: note: previous declaration ‘bool need_expiration_warning(duration_type, int)’
+ bool need_expiration_warning(duration_type dur, coord_def p = you.pos());
+      ^
+player.h:1117:30: error: ‘coord_def’ was not declared in this scope
+ bool need_expiration_warning(coord_def p = you.pos());
+                              ^
+player.h:1159:1: error: ‘string’ does not name a type
+ string temperature_string(int temp);
+ ^
+player.h:1160:1: error: ‘string’ does not name a type
+ string temperature_text(int temp);
+ ^
+In file included from DreamSheep.h:12:0:
+branch.h:58:5: error: ‘vector’ does not name a type
+     vector<rune_type> runes;      // Contained rune(s) (if any).
+     ^
+branch.h:88:20: error: ‘level_id’ was not declared in this scope
+ extern FixedVector<level_id, NUM_BRANCHES> brentry;
+                    ^
+branch.h:88:42: error: template argument 1 is invalid
+ extern FixedVector<level_id, NUM_BRANCHES> brentry;
+                                          ^
+branch.h:88:51: error: invalid type in declaration before ‘;’ token
+ extern FixedVector<level_id, NUM_BRANCHES> brentry;
+                                                   ^
+branch.h:100:26: error: ‘bool is_connected_branch’ redeclared as different kind of symbol
+ bool is_connected_branch(level_id place);
+                          ^
+branch.h:99:6: note: previous declaration ‘bool is_connected_branch(branch_type)’
+ bool is_connected_branch(branch_type branch);
+      ^
+branch.h:100:26: error: ‘level_id’ was not declared in this scope
+ bool is_connected_branch(level_id place);
+                          ^
+branch.h:101:1: error: ‘level_id’ does not name a type
+ level_id current_level_parent();
+ ^
+branch.h:103:40: error: ‘string’ does not name a type
+ branch_type branch_by_abbrevname(const string &branch, branch_type err = NUM_BRANCHES);
+                                        ^
+branch.h:104:39: error: ‘string’ does not name a type
+ branch_type branch_by_shortname(const string &branch);
+                                       ^
+branch.h:106:40: error: ‘you’ was not declared in this scope
+ int ambient_noise(branch_type branch = you.where_are_you);
+                                        ^
+branch.h:108:33: error: ‘coord_def’ does not name a type
+ branch_type get_branch_at(const coord_def& pos);
+                                 ^
+branch.h:114:1: error: ‘string’ does not name a type
+ string branch_noise_desc(branch_type br);
+ ^
+branch.h:115:1: error: ‘string’ does not name a type
+ string branch_rune_desc(branch_type br, bool remaining_only);
+ ^
+In file included from DreamSheep.h:13:0:
+cloud.h:18:5: error: ‘tileidx_t’ does not name a type
+     tileidx_t base;                  ///< The base tile for the cloud type.
+     ^
+cloud.h:22:1: error: ‘cloud_struct’ does not name a type
+ cloud_struct* cloud_at(coord_def pos);
+ ^
+cloud.h:24:32: error: ‘coord_def’ does not name a type
+ cloud_type cloud_type_at(const coord_def &pos);
+                                ^
+cloud.h:25:30: error: ‘coord_def’ does not name a type
+ bool cloud_is_yours_at(const coord_def &pos);
+                              ^
+cloud.h:28:19: error: variable or field ‘delete_cloud’ declared void
+ void delete_cloud(coord_def p);
+                   ^
+cloud.h:28:19: error: ‘coord_def’ was not declared in this scope
+cloud.h:29:28: error: variable or field ‘remove_tornado_clouds’ declared void
+ void remove_tornado_clouds(mid_t whose);
+                            ^
+cloud.h:29:28: error: ‘mid_t’ was not declared in this scope
+cloud.h:30:17: error: variable or field ‘move_cloud’ declared void
+ void move_cloud(coord_def src, coord_def newpos);
+                 ^
+cloud.h:30:17: error: ‘coord_def’ was not declared in this scope
+cloud.h:30:32: error: ‘coord_def’ was not declared in this scope
+ void move_cloud(coord_def src, coord_def newpos);
+                                ^
+cloud.h:31:18: error: variable or field ‘swap_clouds’ declared void
+ void swap_clouds(coord_def p1, coord_def p2);
+                  ^
+cloud.h:31:18: error: ‘coord_def’ was not declared in this scope
+cloud.h:31:32: error: ‘coord_def’ was not declared in this scope
+ void swap_clouds(coord_def p1, coord_def p2);
+                                ^
+cloud.h:33:50: error: ‘coord_def’ does not name a type
+ void check_place_cloud(cloud_type cl_type, const coord_def& p, int lifetime,
+                                                  ^
+cloud.h:36:44: error: ‘coord_def’ does not name a type
+ void place_cloud(cloud_type cl_type, const coord_def& ctarget,
+                                            ^
+cloud.h:44:49: error: ‘cloud_struct’ does not name a type
+ bool actor_cloud_immune(const actor *act, const cloud_struct &cloud);
+                                                 ^
+cloud.h:45:45: error: ‘coord_def’ has not been declared
+ bool mons_avoids_cloud(const monster* mons, coord_def pos,
+                                             ^
+cloud.h:48:33: error: ‘cloud_struct’ does not name a type
+ colour_t get_cloud_colour(const cloud_struct &cloud);
+                                 ^
+cloud.h:49:1: error: ‘coord_def’ does not name a type
+ coord_def get_cloud_originator(const coord_def& pos);
+ ^
+cloud.h:54:1: error: ‘string’ does not name a type
+ string cloud_type_name(cloud_type type, bool terse = true);
+ ^
+cloud.h:56:37: error: ‘string’ does not name a type
+ cloud_type cloud_name_to_type(const string &name);
+                                     ^
+In file included from DreamSheep.h:14:0:
+colour.h:73:53: error: ‘coord_def’ does not name a type
+ typedef int (*element_colour_calculator)(int, const coord_def&);
+                                                     ^
+colour.h:78:5: error: ‘string’ does not name a type
+     string name;
+     ^
+colour.h:80:45: error: ‘string’ has not been declared
+     element_colour_calc(element_type _type, string _name,
+                                             ^
+colour.h:85:27: error: ‘coord_def’ does not name a type
+     virtual int get(const coord_def& loc = coord_def(),
+                           ^
+colour.h:85:54: error: ‘coord_def’ was not declared in this scope
+     virtual int get(const coord_def& loc = coord_def(),
+                                                      ^
+colour.h: In constructor ‘element_colour_calc::element_colour_calc(element_type, int, element_colour_calculator)’:
+colour.h:82:24: error: class ‘element_colour_calc’ does not have any field named ‘name’
+         : type(_type), name(_name), calc(_calc)
+                        ^
+colour.h: At global scope:
+colour.h:96:25: error: ‘string’ does not name a type
+ int str_to_colour(const string &str, int default_colour = -1,
+                         ^
+colour.h:98:7: error: ‘string’ does not name a type
+ const string colour_to_str(colour_t colour);
+       ^
+colour.h:107:37: error: expected initializer before ‘IMMUTABLE’
+ bool is_low_colour(colour_t colour) IMMUTABLE;
+                                     ^
+colour.h:108:38: error: expected initializer before ‘IMMUTABLE’
+ bool is_high_colour(colour_t colour) IMMUTABLE;
+                                      ^
+colour.h:109:43: error: expected initializer before ‘IMMUTABLE’
+ colour_t make_low_colour(colour_t colour) IMMUTABLE;
+                                           ^
+colour.h:110:44: error: expected initializer before ‘IMMUTABLE’
+ colour_t make_high_colour(colour_t colour) IMMUTABLE;
+                                            ^
+colour.h:112:27: error: ‘coord_def’ does not name a type
+                     const coord_def& loc = coord_def());
+                           ^
+colour.h:112:54: error: ‘coord_def’ was not declared in this scope
+                     const coord_def& loc = coord_def());
+                                                      ^
+colour.h:113:30: error: ‘coord_def’ does not name a type
+ int get_disjunct_phase(const coord_def& loc);
+                              ^
+colour.h:114:30: error: ‘coord_def’ does not name a type
+ bool get_tornado_phase(const coord_def& loc);
+                              ^
+colour.h:115:26: error: ‘coord_def’ does not name a type
+ bool get_orb_phase(const coord_def& loc);
+                          ^
+colour.h:120:49: error: ‘coord_def’ does not name a type
+ unsigned real_colour(unsigned raw_colour, const coord_def& loc = coord_def());
+                                                 ^
+colour.h:120:76: error: ‘coord_def’ was not declared in this scope
+ unsigned real_colour(unsigned raw_colour, const coord_def& loc = coord_def());
+                                                                            ^
+In file included from coordit.h:4:0,
+                 from DreamSheep.h:15:
+coord-circle.h:15:5: error: ‘coord_def’ does not name a type
+     coord_def min;
+     ^
+coord-circle.h:16:5: error: ‘coord_def’ does not name a type
+     coord_def max;
+     ^
+coord-circle.h:20:20: error: ‘coord_def’ does not name a type
+     rect_def(const coord_def &min_, const coord_def &max_)
+                    ^
+coord-circle.h:20:43: error: ‘coord_def’ does not name a type
+     rect_def(const coord_def &min_, const coord_def &max_)
+                                           ^
+coord-circle.h:23:25: error: ‘coord_def’ does not name a type
+     bool contains(const coord_def& p) const PURE;
+                         ^
+coord-circle.h:23:39: error: expected ‘;’ at end of member declaration
+     bool contains(const coord_def& p) const PURE;
+                                       ^
+coord-circle.h:23:45: error: ‘PURE’ does not name a type
+     bool contains(const coord_def& p) const PURE;
+                                             ^
+coord-circle.h:24:47: error: expected ‘;’ at end of member declaration
+     rect_def intersect(const rect_def& other) const PURE;
+                                               ^
+coord-circle.h:24:53: error: ‘PURE’ does not name a type
+     rect_def intersect(const rect_def& other) const PURE;
+                                                     ^
+coord-circle.h: In constructor ‘rect_def::rect_def(const int&, const int&)’:
+coord-circle.h:21:11: error: class ‘rect_def’ does not have any field named ‘min’
+         : min(min_), max(max_) {}
+           ^
+coord-circle.h:21:22: error: class ‘rect_def’ does not have any field named ‘max’
+         : min(min_), max(max_) {}
+                      ^
+coord-circle.h: At global scope:
+coord-circle.h:44:5: error: ‘coord_def’ does not name a type
+     coord_def origin;
+     ^
+coord-circle.h:56:22: error: ‘coord_def’ does not name a type
+     circle_def(const coord_def &origin_, const circle_def &bds);
+                      ^
+coord-circle.h:61:22: error: ‘coord_def’ does not name a type
+     circle_def(const coord_def &origin_, int param, circle_type ctype);
+                      ^
+coord-circle.h:63:25: error: ‘coord_def’ does not name a type
+     bool contains(const coord_def &p) const PURE;
+                         ^
+coord-circle.h:63:39: error: expected ‘;’ at end of member declaration
+     bool contains(const coord_def &p) const PURE;
+                                       ^
+coord-circle.h:63:45: error: ‘PURE’ does not name a type
+     bool contains(const coord_def &p) const PURE;
+                                             ^
+coord-circle.h:64:32: error: expected ‘;’ at end of member declaration
+     const rect_def& get_bbox() const PURE;
+                                ^
+coord-circle.h:64:38: error: ‘PURE’ does not name a type
+     const rect_def& get_bbox() const PURE;
+                                      ^
+coord-circle.h:65:11: error: ‘coord_def’ does not name a type
+     const coord_def& get_center() const PURE;
+           ^
+In file included from DreamSheep.h:15:0:
+coordit.h:6:43: error: expected template-name before ‘<’ token
+ class rectangle_iterator : public iterator<forward_iterator_tag, coord_def>
+                                           ^
+coordit.h:6:43: error: expected ‘{’ before ‘<’ token
+coordit.h:6:43: error: expected unqualified-id before ‘<’ token
+coordit.h:32:50: error: expected template-name before ‘<’ token
+ class random_rectangle_iterator : public iterator<forward_iterator_tag,
+                                                  ^
+coordit.h:32:50: error: expected ‘{’ before ‘<’ token
+coordit.h:32:50: error: expected unqualified-id before ‘<’ token
+coordit.h:60:40: error: expected template-name before ‘<’ token
+ class radius_iterator : public iterator<forward_iterator_tag, coord_def>
+                                        ^
+coordit.h:60:40: error: expected ‘{’ before ‘<’ token
+coordit.h:60:40: error: expected unqualified-id before ‘<’ token
