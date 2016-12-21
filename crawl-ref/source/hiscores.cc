@@ -1584,7 +1584,7 @@ void scorefile_entry::init(time_t dt)
     if (base_score)
     {
         // sprint games could overflow a 32 bit value
-        uint64_t pt = points + _award_modified_experience();
+        /*uint64_t pt = points + _award_modified_experience();
         if(!newscoredebug)
         {
             cout << "Method tidak jalan";
@@ -1605,7 +1605,8 @@ void scorefile_entry::init(time_t dt)
         pt += num_runes * 10000;
         pt += num_runes * (num_runes + 2) * 1000;
 
-        points = pt;
+        points = pt;*/
+        score_calculation(points, num_runes, num_diff_runes, death_type);
     }
     else
         ASSERT(crawl_state.game_is_sprint());

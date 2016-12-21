@@ -54,7 +54,7 @@ static int _award_modified_experience()
 
     if (xp <= 250000)
     {
-        cout << "Method 1 Jalan";
+        cout << "Method 1A Jalan" << endl;
         newscoredebug = true;
         return xp * 7 / 10;
     }
@@ -65,7 +65,7 @@ static int _award_modified_experience()
     if (xp <= 750000)
     {
         result += xp * 4 / 10;
-        cout << "Method 2 Jalan";
+        cout << "Method 1B Jalan" << endl;
         newscoredebug = true;
         return result;
     }
@@ -76,7 +76,7 @@ static int _award_modified_experience()
     if (xp <= 2000000)
     {
         result += xp * 2 / 10;
-        cout << "Method 3 Jalan";
+        cout << "Method 1C Jalan" << endl;
         newscoredebug = true;
         return result;
     }
@@ -85,8 +85,37 @@ static int _award_modified_experience()
     xp -= 2000000;
 
     result += xp / 10;
-    cout << "Method 4 Jalan";
+    cout << "Method 1D Jalan" << endl;
     newscoredebug = true;
 
     return result;
+}
+
+static void score_calculation(int points, int num_runes, int num_diff_runes, int death_type)
+{
+    uint64_t pt = points + _award_modified_experience();
+    if(!newscoredebug)
+    {
+        cout << "Method 1 tidak jalan" << endl;
+    }
+
+
+    num_runes      = runes_in_pack();
+    num_diff_runes = num_runes;
+
+    // There's no point in rewarding lugging artefacts. Thus, no points
+    // for the value of the inventory. -- 1KB
+    if (death_type == KILLED_BY_WINNING)
+    {
+        pt += 250000; // the Orb
+        pt += num_runes * 2000 + 4000;
+        pt += ((uint64_t)250000) * 25000 * num_runes * num_runes
+            / (1+you.num_turns);
+    }
+    pt += num_runes * 10000;
+    pt += num_runes * (num_runes + 2) * 1000;
+
+    points = pt;
+
+    cout << "Method 2 Jalan" << endl;
 }
