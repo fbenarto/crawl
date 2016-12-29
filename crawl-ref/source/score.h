@@ -70,7 +70,7 @@ class scores
             return result;
         }
 
-        result += 750000cd * 4 / 10;
+        result += 750000 * 4 / 10;
         xp -= 750000;
 
         if (xp <= 2000000)
