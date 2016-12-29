@@ -1606,7 +1606,7 @@ void scorefile_entry::init(time_t dt)
         pt += num_runes * (num_runes + 2) * 1000;
 
         points = pt;*/
-        score_calculation(points, num_runes, num_diff_runes, death_type);
+        scores::score_calculation(points, num_runes, num_diff_runes, death_type);
     }
     else
         ASSERT(crawl_state.game_is_sprint());
