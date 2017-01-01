@@ -1549,7 +1549,7 @@ void scorefile_entry::init(time_t dt)
     // use the default formula.
     if (base_score)
     {
-        calculate_score(points, num_runes, num_diff_runes, death_type);        
+        Score::calculate_score(points, num_runes, num_diff_runes, death_type);        
     }
     else
         ASSERT(crawl_state.game_is_sprint());
