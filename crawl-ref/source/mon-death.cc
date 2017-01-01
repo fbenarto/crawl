@@ -2497,8 +2497,8 @@ item_def* monster_die(monster* mons, killer_type killer,
         _make_derived_undead(mons, !death_message, false);
 
     const unsigned int player_xp = gives_player_xp
-        ? _calc_player_experience(mons) : 0;
-    const unsigned int monster_xp = _calc_monster_experience(mons, killer,
+        ? Experience::_calc_player_experience(mons) : 0;
+    const unsigned int monster_xp = Experience::_calc_monster_experience(mons, killer,
                                                              killer_index);
 
     // Player Powered by Death
@@ -2531,7 +2531,7 @@ item_def* monster_die(monster* mons, killer_type killer,
     {
         if (corpse && _reaping(mons))
             corpse = nullptr;
-        _give_experience(player_xp, monster_xp, killer, killer_index,
+        Experience::_give_experience(player_xp, monster_xp, killer, killer_index,
                          pet_kill, was_visible);
         crawl_state.dec_mon_acting(mons);
 
@@ -2616,7 +2616,7 @@ item_def* monster_die(monster* mons, killer_type killer,
 
     if (!mons_reset)
     {
-        _give_experience(player_xp, monster_xp, killer, killer_index, pet_kill,
+        Experience::_give_experience(player_xp, monster_xp, killer, killer_index, pet_kill,
                          was_visible);
     }
     return corpse;
