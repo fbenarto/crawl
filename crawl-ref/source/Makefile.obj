@@ -55,6 +55,7 @@ dgnevent.o \
 directn.o \
 dlua.o \
 domino.o \
+dream_sheep.o \
 dungeon.o \
 end.o \
 english.o \
