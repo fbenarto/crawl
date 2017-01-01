@@ -55,7 +55,6 @@
 #endif
 #include "unwind.h"
 #include "version.h"
-#include "score.h"
 
 #define SCORE_VERSION "0.1"
 
@@ -1483,39 +1482,39 @@ void scorefile_entry::reset()
     potions_used         = 0;
 }
 
-// static int _award_modified_experience()
-// {
-//     int xp = you.experience;
-//     int result = 0;
+static int _award_modified_experience()
+{
+    int xp = you.experience;
+    int result = 0;
 
-//     if (xp <= 250000)
-//         return xp * 7 / 10;
+    if (xp <= 250000)
+        return xp * 7 / 10;
 
-//     result += 250000 * 7 / 10;
-//     xp -= 250000;
+    result += 250000 * 7 / 10;
+    xp -= 250000;
 
-//     if (xp <= 750000)
-//     {
-//         result += xp * 4 / 10;
-//         return result;
-//     }
+    if (xp <= 750000)
+    {
+        result += xp * 4 / 10;
+        return result;
+    }
 
-//     result += 750000 * 4 / 10;
-//     xp -= 750000;
+    result += 750000 * 4 / 10;
+    xp -= 750000;
 
-//     if (xp <= 2000000)
-//     {
-//         result += xp * 2 / 10;
-//         return result;
-//     }
+    if (xp <= 2000000)
+    {
+        result += xp * 2 / 10;
+        return result;
+    }
 
-//     result += 2000000 * 2 / 10;
-//     xp -= 2000000;
+    result += 2000000 * 2 / 10;
+    xp -= 2000000;
 
-//     result += xp / 10;
+    result += xp / 10;
 
-//     return result;
-// }
+    return result;
+}
 
 void scorefile_entry::init(time_t dt)
 {
@@ -1584,12 +1583,7 @@ void scorefile_entry::init(time_t dt)
     if (base_score)
     {
         // sprint games could overflow a 32 bit value
-        /*uint64_t pt = points + _award_modified_experience();
-        if(!newscoredebug)
-        {
-            cout << "Method tidak jalan";
-        }
-
+        uint64_t pt = points + _award_modified_experience();
         num_runes      = runes_in_pack();
         num_diff_runes = num_runes;
 
@@ -1605,8 +1599,7 @@ void scorefile_entry::init(time_t dt)
         pt += num_runes * 10000;
         pt += num_runes * (num_runes + 2) * 1000;
 
-        points = pt;*/
-        scores::score_calculation(points, num_runes, num_diff_runes, death_type);
+        points = pt;
     }
     else
         ASSERT(crawl_state.game_is_sprint());
