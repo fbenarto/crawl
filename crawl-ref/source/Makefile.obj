@@ -196,6 +196,7 @@ ranged_attack.o \
 ray.o \
 rot.o \
 religion.o \
+score.o \
 shopping.o \
 shout.o \
 show.o \
