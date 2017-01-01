@@ -5740,7 +5740,7 @@ void mons_cast(monster* mons, bolt pbolt, spell_type spell_cast,
 
     // SPELL_SLEEP_GAZE ;)
     case SPELL_DREAM_DUST:
-        _dream_sheep_sleep(*mons, *foe);
+        Dream_Sheep::_dream_sheep_sleep(*mons, *foe);
         return;
 
     case SPELL_CONFUSION_GAZE:
