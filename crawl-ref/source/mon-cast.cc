@@ -77,6 +77,7 @@
 #include "viewchar.h"
 #include "xom.h"
 #include "dream_sheep.h"
+#include "mini_sheep.h"
 
 static bool _valid_mon_spells[NUM_SPELLS];
 
@@ -5740,7 +5741,10 @@ void mons_cast(monster* mons, bolt pbolt, spell_type spell_cast,
 
     // SPELL_SLEEP_GAZE ;)
     case SPELL_DREAM_DUST:
-        Dream_Sheep::_dream_sheep_sleep(*mons, *foe);
+        if(!Dream_Sheep::mini)
+            Dream_Sheep::_dream_sheep_sleep(*mons, *foe);
+        else
+            Mini_Sheep::_dream_sheep_sleep(*mons, *foe);
         return;
 
     case SPELL_CONFUSION_GAZE:

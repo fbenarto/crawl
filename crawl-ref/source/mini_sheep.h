@@ -1,5 +1,5 @@
-#ifndef DREAM_SHEEP_H
-#define DREAM_SHEEP_H
+#ifndef MINI_SHEEP_H
+#define MINI_SHEEP_H
 
 #include "AppHdr.h"
 
@@ -74,12 +74,11 @@
 #include "view.h"
 #include "viewchar.h"
 #include "xom.h"
+#include "dream_sheep.h"
 
-class Dream_Sheep
+class Mini_Sheep : public Dream_Sheep
 {
 	public:
-
-	static const bool mini;
 
 	static const int MIN_DREAM_SUCCESS_POWER;
 
