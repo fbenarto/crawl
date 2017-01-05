@@ -79,7 +79,7 @@ class Dream_Sheep
 {
 	public:
 
-	static const bool mini;
+	static const bool mini = false;
 
 	static const int MIN_DREAM_SUCCESS_POWER;
 

@@ -321,6 +321,14 @@ TILES_ANY = YesPlease
 endif
 
 #
+# MINI variant
+#
+ifdef MINI
+TILES_ANY = YesPlease
+MINI += $(TILES_OBJECTS) $(GLTILES_OBJECTS)
+endif
+
+#
 # Check for an Apple-released compiler.
 #
 ifndef NO_APPLE_GCC
